@@ -2,7 +2,6 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="r3lfD-xLl5mVCRbMKAUqODSUV7tXXp7N1dzrqmAwCZc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ricerca Perdite & Infiltrazioni | Studio Tecnico Specializzato | Italia</title>
   <meta name="description" content="Studio tecnico specializzato in ricerca perdite acqua, infiltrazioni, muffa e umidità. Tecnologie non invasive: termografia, gas traccianti, videoispezione, droni. Operativi su tutto il territorio nazionale. Preventivi gratuiti." />
@@ -588,8 +587,8 @@
         <div class="slbl">Contattaci</div>
         <h2>Preventivo <span class="acc">gratuito</span></h2>
         <p class="sintro" style="margin-bottom:1.8rem">Descrivi sommariamente la problematica e i tuoi recapiti: ti risponderemo rapidamente con una valutazione e un preventivo senza impegno.</p>
-        <a href="mailto:infiltrazioni2011@gmail.com" class="citem">
-          <div class="cico">✉️</div><div><div class="clbl">Email</div><div class="cval">infiltrazioni2011@gmail.com</div></div>
+        <a href="/cdn-cgi/l/email-protection#7a13141c13160e081b0013151413484a4b4b3a1d171b131654191517" class="citem">
+          <div class="cico">✉️</div><div><div class="clbl">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="dbb2b5bdb2b7afa9baa1b2b4b5b2e9ebeaea9bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></div></div>
         </a>
         <a href="tel:+393473402443" class="citem">
           <div class="cico">📞</div><div><div class="clbl">Telefono</div><div class="cval">347 340 2443</div></div>
@@ -606,28 +605,36 @@
         </div>
       </div>
       <div class="cform reveal">
-        <div class="fg"><label>Nome e cognome *</label><input type="text" placeholder="Mario Rossi" /></div>
+        <div style="background:rgba(249,200,0,0.1);border:1px solid rgba(249,200,0,0.4);border-radius:8px;padding:1.2rem 1.4rem;margin-bottom:1.5rem;display:flex;gap:0.8rem;align-items:flex-start;">
+          <span style="font-size:1.4rem;flex-shrink:0">&#128296;</span>
+          <div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--yel);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.3rem">Sistema in fase di manutenzione</div>
+            <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.65;">Il sistema di invio delle richieste è momentaneamente in fase di manutenzione. Contattaci direttamente:</p>
+            <div style="margin-top:0.9rem;display:flex;flex-direction:column;gap:0.5rem;">
+              <a href="mailto:infiltrazioni2011@gmail.com" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.07);border:1px solid rgba(75,174,232,0.25);border-radius:5px;padding:0.6rem 1rem;color:var(--yel);text-decoration:none;font-size:0.88rem;font-weight:700;">&#9993; infiltrazioni2011@gmail.com</a>
+              <a href="tel:+393473402443" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.07);border:1px solid rgba(75,174,232,0.25);border-radius:5px;padding:0.6rem 1rem;color:var(--yel);text-decoration:none;font-size:0.88rem;font-weight:700;">&#128222; 347 340 2443</a>
+            </div>
+          </div>
+        </div>
+        <div class="fg"><label>Nome e cognome *</label><input type="text" placeholder="Mario Rossi" onfocus="showMaint()" readonly style="cursor:not-allowed;opacity:0.4" /></div>
         <div class="fgrow">
-          <div class="fg"><label>Telefono *</label><input type="tel" placeholder="+39 ..." /></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="name@email.com" /></div>
+          <div class="fg"><label>Telefono *</label><input type="tel" placeholder="+39 ..." onfocus="showMaint()" readonly style="cursor:not-allowed;opacity:0.4" /></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="name@email.com" onfocus="showMaint()" readonly style="cursor:not-allowed;opacity:0.4" /></div>
         </div>
-        <div class="fg">
-          <label>Tipo di problema *</label>
-          <select>
-            <option value="">Seleziona...</option>
-            <option>Perdita acqua (tubazioni / impianti)</option>
-            <option>Infiltrazione da tetto / terrazzo</option>
-            <option>Umidità e muffa</option>
-            <option>Ispezione termografica</option>
-            <option>Mappatura sottoservizi</option>
-            <option>Collaudo manto impermeabile</option>
-            <option>Perizia tecnica / supporto CTU-CTP</option>
-            <option>Altro</option>
-          </select>
+        <div class="fg"><label>Tipo di problema *</label><select onclick="showMaint()" style="cursor:not-allowed;opacity:0.4"><option>Seleziona...</option></select></div>
+        <div class="fg"><label>Citta / Regione *</label><input type="text" placeholder="es. Milano, Lombardia" onfocus="showMaint()" readonly style="cursor:not-allowed;opacity:0.4" /></div>
+        <div class="fg"><label>Descrizione del problema</label><textarea placeholder="Descrivi sommariamente la problematica..." onfocus="showMaint()" readonly style="cursor:not-allowed;opacity:0.4"></textarea></div>
+        <button class="bsub" onclick="showMaint()" style="opacity:0.5;cursor:not-allowed">&#128296; Sistema temporaneamente in manutenzione</button>
+      </div>
+      <div id="mp" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#0d2f5e;border:2px solid rgba(249,200,0,0.5);border-radius:14px;padding:2.5rem;max-width:400px;width:90%;text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:0.8rem">&#128296;</div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.3rem;color:var(--yel);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem">Sistema in manutenzione</h3>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.58);line-height:1.7;margin-bottom:1.4rem">Il sistema di invio delle richieste e momentaneamente in fase di manutenzione. Ti invitiamo a contattarci direttamente:</p>
+          <a href="mailto:infiltrazioni2011@gmail.com" style="display:block;background:var(--yel);color:#081b36;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.85rem;border-radius:5px;text-decoration:none;margin-bottom:0.6rem;">&#9993; Invia Email</a>
+          <a href="tel:+393473402443" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(75,174,232,0.3);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.85rem;border-radius:5px;text-decoration:none;margin-bottom:1.2rem;">&#128222; 347 340 2443</a>
+          <button onclick="document.getElementById('mp').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.3);font-size:0.8rem;cursor:pointer;text-decoration:underline;">Chiudi</button>
         </div>
-        <div class="fg"><label>Città / Regione *</label><input type="text" placeholder="es. Milano, Lombardia" /></div>
-        <div class="fg"><label>Descrizione del problema</label><textarea placeholder="Descrivi sommariamente la problematica e i tuoi recapiti..."></textarea></div>
-        <button class="bsub" onclick="handleSubmit(event)">Invia richiesta preventivo →</button>
       </div>
     </div>
   </div>
@@ -654,7 +661,7 @@
     <div class="fcol">
       <h5>Contatti</h5>
       <ul>
-        <li><a href="mailto:infiltrazioni2011@gmail.com">infiltrazioni2011@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#9ef7f0f8f7f2eaecffe4f7f1f0f7acaeafafdef9f3fff7f2b0fdf1f3"><span class="__cf_email__" data-cfemail="ef86818986839b9d8e9586808186dddfdedeaf88828e8683c18c8082">[email&#160;protected]</span></a></li>
         <li><a href="tel:+393473402443">347 340 2443</a></li>
         <li><a href="#zone">Zone operative</a></li>
         <li><a href="#contatti">Preventivo gratuito</a></li>
@@ -667,7 +674,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Rain drops
   const dc = document.getElementById('drops');
   for (let i = 0; i < 18; i++) {
@@ -677,6 +684,10 @@
     dc.appendChild(d);
   }
   // Menu
+  function showMaint() {
+    var p = document.getElementById('mp');
+    p.style.display = 'flex';
+  }
   function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
   document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
   // Reveal
@@ -684,12 +695,3 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   // Nav shadow
   window.addEventListener('scroll', () => { document.getElementById('mainNav').style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,0.4)' : 'none'; });
-  // Form
-  function handleSubmit(e) {
-    const b = e.target;
-    b.textContent = '✅ Richiesta inviata! Ti contatteremo presto.';
-    b.style.cssText = 'background:#388e3c;color:#fff;width:100%;padding:0.95rem;font-family:Barlow Condensed,sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:5px;cursor:default';
-  }
-</script>
-</body>
-</html>
