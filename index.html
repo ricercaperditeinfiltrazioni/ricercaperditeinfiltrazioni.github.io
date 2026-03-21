@@ -3,671 +3,94 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="r3lfD-xLl5mVCRbMKAUqODSUV7tXXp7N1dzrqmAwCZc" />
-<title>Ricerca Perdite &amp; Infiltrazioni | Studio Tecnico Specializzato | Italia</title>
-<meta name="description" content="Studio tecnico specializzato in ricerca perdite acqua, infiltrazioni, muffa e umidita. Tecnologie non invasive: termografia, gas traccianti, videoispezione, droni. Operativi su tutto il territorio nazionale. Preventivi gratuiti." />
-<meta name="keywords" content="ricerca perdite acqua, infiltrazioni, umidita, muffa, termografia, gas traccianti, videoispezione, mappatura sottoservizi, perizie, CTU, CTP, amministratori condominio" />
-<meta name="robots" content="index, follow" />
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKCBFN4M7D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BKCBFN4M7D');
-</script>
+<title>Studio Tecnico Diagnostica | Ricerca Perdite e Infiltrazioni</title>
+<meta name="description" content="Specialisti in diagnostica non invasiva. Risolviamo problemi di umidità, muffa e infiltrazioni con tecnologie avanzate." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
 <style>
-:root{
-  --bd:#0a1f3c; --bm:#0f3460; --bl:#1255a0; --bll:#1976d2; --sky:#4baee8;
-  --yel:#f9c800; --yd:#e6a800; --wh:#ffffff; --off:#f5f9fe;
-  --txt:#162030; --mu:#56708a; --bdr:rgba(18,85,160,0.13);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Lato',sans-serif;color:var(--txt);background:var(--wh);overflow-x:hidden}
-
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,31,60,0.96);backdrop-filter:blur(14px);border-bottom:2px solid var(--yel);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}
-.nb{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:var(--wh);letter-spacing:0.04em;text-transform:uppercase;line-height:1.2}
-.nb span{color:var(--yel)}
-.nl{display:flex;gap:1.8rem;list-style:none}
-.nl a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
-.nl a:hover{color:var(--yel)}
-.nc{background:var(--yel);color:var(--bd)!important;padding:0.4rem 1.1rem;border-radius:3px}
-.nc:hover{background:var(--yd)!important}
-.nt{color:var(--yel)!important}
-.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hbg span{display:block;width:24px;height:2px;background:var(--wh);border-radius:2px}
-
-/* ── HERO – sfondo azzurro/blu chiaro con gocce ── */
-#hero{
-  min-height:100vh;
-  background:linear-gradient(160deg,#1a4a7a 0%,#1e5f96 35%,#2478b5 65%,#1a6aaa 100%);
-  display:flex;flex-direction:column;justify-content:center;
-  padding:8rem 3rem 5rem;position:relative;overflow:hidden
-}
-/* cerchi luce */
-.hbg2{position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 55% 55% at 75% 35%,rgba(255,255,255,0.18) 0%,transparent 65%),
-    radial-gradient(ellipse 40% 40% at 20% 75%,rgba(255,255,255,0.10) 0%,transparent 60%),
-    radial-gradient(ellipse 30% 30% at 50% 10%,rgba(249,200,0,0.12) 0%,transparent 55%)
-}
-/* griglia leggera */
-.hgr{position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px);
-  background-size:48px 48px
-}
-/* gocce animate */
-.drops{position:absolute;inset:0;pointer-events:none}
-.drop{position:absolute;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;animation:dropfall linear infinite;opacity:0}
-@keyframes dropfall{
-  0%{transform:translateY(-30px) scaleY(1);opacity:0}
-  5%{opacity:0.7}
-  85%{opacity:0.5}
-  95%{transform:translateY(100vh) scaleY(1.4);opacity:0.2}
-  100%{transform:translateY(100vh) scaleY(0.8);opacity:0}
-}
-/* splash al fondo */
-.splash{position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent)}
-
-.hi{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%}
-.hbadge{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);
-  color:var(--wh);
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;
-  padding:0.4rem 1.1rem;border-radius:100px;margin-bottom:1.5rem;
-  animation:fu 0.7s ease both;backdrop-filter:blur(4px)
-}
-.hbadge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--yel);animation:bl 1.5s infinite}
-@keyframes bl{0%,100%{opacity:1}50%{opacity:0.3}}
-@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-
-/* TITOLO GRANDE come locandina */
-h1{
-  font-family:'Barlow Condensed',sans-serif;
-  font-weight:900;
-  font-size:clamp(2.4rem,5.5vw,4.5rem);
-  color:var(--wh);
-  line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;
-  margin-bottom:1.4rem;
-  animation:fu 0.7s 0.1s ease both;
-  text-shadow:0 2px 24px rgba(0,0,0,0.25)
-}
-h1 .ac{color:var(--yel);display:block}
-h1 .qst{font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:700;color:rgba(255,255,255,0.9);display:block;margin-bottom:0.3rem}
-
-.hsub{font-size:1.05rem;color:rgba(255,255,255,0.82);line-height:1.78;max-width:580px;font-weight:300;margin-bottom:2rem;animation:fu 0.7s 0.2s ease both;text-shadow:0 1px 8px rgba(0,0,0,0.15)}
-.hpills{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.2rem;animation:fu 0.7s 0.25s ease both}
-.pill{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:var(--wh);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:2px;backdrop-filter:blur(4px)}
-.hact{display:flex;gap:1rem;flex-wrap:wrap;animation:fu 0.7s 0.3s ease both}
-.by{background:var(--yel);color:var(--bd);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.9rem 2.4rem;border-radius:4px;text-decoration:none;box-shadow:0 4px 20px rgba(249,200,0,0.4);transition:all 0.25s}
-.by:hover{background:var(--yd);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,200,0,0.5)}
-.bo{border:2px solid rgba(255,255,255,0.5);color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.9rem 2.4rem;border-radius:4px;text-decoration:none;transition:all 0.25s;backdrop-filter:blur(4px)}
-.bo:hover{border-color:var(--wh);background:rgba(255,255,255,0.1)}
-.hstats{display:flex;margin-top:3.5rem;border:1px solid rgba(255,255,255,0.2);border-radius:8px;overflow:hidden;animation:fu 0.7s 0.4s ease both;backdrop-filter:blur(8px);background:rgba(255,255,255,0.08)}
-.hs{flex:1;padding:1.2rem 1rem;border-right:1px solid rgba(255,255,255,0.15);text-align:center}
-.hs:last-child{border-right:none}
-.hsv{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;color:var(--yel);line-height:1;display:block}
-.hsl{font-size:0.68rem;color:rgba(255,255,255,0.6);margin-top:0.3rem;letter-spacing:0.06em;text-transform:uppercase}
-
-/* ── STRIP ── */
-.strip{background:var(--yel);padding:1rem 3rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
-.sri{display:flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.95rem;letter-spacing:0.04em;text-transform:uppercase;color:var(--bd)}
-
-/* ── SHARED ── */
-section{padding:6rem 3rem}
-.ct{max-width:1100px;margin:0 auto}
-.sl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--bll);margin-bottom:0.5rem}
-h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);color:var(--bd);line-height:1.05;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:0.9rem}
-h2 .ac{color:var(--bll)}
-.si{font-size:0.97rem;color:var(--mu);line-height:1.8;max-width:620px;font-weight:300}
-.rv{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
-.rv.visible{opacity:1;transform:none}
-
-/* ── CHI SIAMO ── */
-#chisiamo{background:var(--off)}
-.ag{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.at p{font-size:0.96rem;color:var(--mu);line-height:1.85;margin-bottom:1.1rem;font-weight:300}
-.at p strong{color:var(--txt);font-weight:700}
-.th2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bd);margin:1.5rem 0 0.8rem}
-.chips{display:flex;flex-wrap:wrap;gap:0.45rem}
-.chip{background:var(--wh);border:1px solid var(--bdr);color:var(--txt);font-size:0.8rem;font-weight:700;padding:0.32rem 0.85rem;border-radius:2px;transition:all 0.2s;cursor:default}
-.chip:hover{background:var(--bll);color:var(--wh);border-color:var(--bll)}
-.av{background:var(--bd);border-radius:10px;padding:2.5rem;position:relative;overflow:hidden}
-.av::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(75,174,232,0.2) 0%,transparent 60%)}
-.tl{position:relative;z-index:1}
-.ti{display:flex;align-items:center;gap:1rem;padding:0.85rem 0;border-bottom:1px solid rgba(75,174,232,0.1)}
-.ti:last-child{border-bottom:none}
-.td2{width:8px;height:8px;border-radius:50%;background:var(--yel);flex-shrink:0}
-.tn2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.95rem;color:var(--wh);letter-spacing:0.04em;text-transform:uppercase}
-.td3{font-size:0.74rem;color:rgba(255,255,255,0.35);margin-top:0.1rem}
-.tbg{margin-left:auto;background:rgba(75,174,232,0.12);border:1px solid rgba(75,174,232,0.25);color:var(--sky);font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.18rem 0.45rem;border-radius:2px;white-space:nowrap}
-
-/* ── SERVIZI ── */
-#servizi{background:var(--wh)}
-.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;margin-top:3rem}
-.sc{border:1px solid var(--bdr);border-radius:8px;padding:1.9rem;position:relative;overflow:hidden;background:var(--wh);transition:all 0.3s}
-.sc::after{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--bll),var(--sky));transform:scaleY(0);transform-origin:top;transition:transform 0.3s}
-.sc:hover{box-shadow:0 8px 40px rgba(10,31,60,0.14);transform:translateY(-4px);border-color:rgba(18,85,160,0.22)}
-.sc:hover::after{transform:scaleY(1)}
-.sci{font-size:2rem;margin-bottom:0.9rem;display:block}
-.sc h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;color:var(--bd);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.7rem}
-.sc p{font-size:0.85rem;color:var(--mu);line-height:1.72;font-weight:300}
-.sc ul{list-style:none;margin-top:0.7rem}
-.sc ul li{font-size:0.81rem;color:var(--mu);padding:0.18rem 0 0.18rem 1.1rem;position:relative;line-height:1.5}
-.sc ul li::before{content:'→';position:absolute;left:0;color:var(--bll);font-size:0.68rem;top:0.22rem}
-
-/* ── TECNOLOGIE ── */
-#tecnologie{background:var(--bd);position:relative;overflow:hidden}
-#tecnologie::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 20% 50%,rgba(18,85,160,0.4) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 85% 30%,rgba(75,174,232,0.14) 0%,transparent 55%)}
-#tecnologie .sl{color:var(--sky)}
-#tecnologie h2{color:var(--wh)}
-#tecnologie h2 .ac{color:var(--yel)}
-#tecnologie .si{color:rgba(255,255,255,0.42)}
-.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1.1rem;margin-top:3rem;position:relative;z-index:1}
-.tc{background:rgba(255,255,255,0.04);border:1px solid rgba(75,174,232,0.14);border-radius:8px;padding:1.6rem;text-align:center;transition:all 0.3s}
-.tc:hover{background:rgba(75,174,232,0.1);border-color:rgba(75,174,232,0.38);transform:translateY(-3px)}
-.tci{font-size:2.1rem;margin-bottom:0.8rem;display:block}
-.tc h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.95rem;color:var(--wh);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem}
-.tc p{font-size:0.76rem;color:rgba(255,255,255,0.36);line-height:1.6}
-
-/* ── METODO ── */
-#metodo{background:var(--off)}
-.mg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.steps{display:flex;flex-direction:column}
-.step{display:flex;gap:1.4rem;padding:1.4rem 0;border-bottom:1px solid var(--bdr)}
-.step:last-child{border-bottom:none}
-.sn{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.8rem;color:rgba(18,85,160,0.12);line-height:1;min-width:2.2rem;flex-shrink:0}
-.step h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--bd);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem}
-.step p{font-size:0.85rem;color:var(--mu);line-height:1.7;font-weight:300}
-.tpanel{background:var(--bd);border-radius:10px;padding:2rem;position:relative;overflow:hidden}
-.tpanel::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(75,174,232,0.15) 0%,transparent 60%)}
-.tph{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;position:relative;z-index:1}
-.tptit{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.38)}
-.tplive{display:flex;align-items:center;gap:0.32rem;font-size:0.65rem;font-weight:700;color:#4caf50;letter-spacing:0.08em}
-.tplive::before{content:'';width:5px;height:5px;border-radius:50%;background:#4caf50;animation:bl 1.5s infinite}
-.timg{border-radius:6px;overflow:hidden;margin-bottom:1rem;position:relative;z-index:1}
-.tread{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.55rem;position:relative;z-index:1}
-.tr{text-align:center;background:rgba(255,255,255,0.05);border-radius:5px;padding:0.55rem 0.2rem}
-.trv{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;line-height:1}
-.trl{font-size:0.58rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.18rem}
-.rpb{margin-top:1.1rem;padding:0.95rem 1.1rem;background:rgba(249,200,0,0.07);border:1px solid rgba(249,200,0,0.22);border-radius:6px;position:relative;z-index:1;display:flex;align-items:flex-start;gap:0.7rem}
-.rpb p{font-size:0.76rem;color:rgba(255,255,255,0.46);line-height:1.6}
-.rpb strong{color:var(--yel);font-size:0.8rem;display:block;margin-bottom:0.18rem}
-
-/* ── A CHI ── */
-#achi{background:var(--wh)}
-.acg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1.2rem;margin-top:3rem}
-.ac2{border:1px solid var(--bdr);border-radius:8px;padding:1.6rem;text-align:center;transition:all 0.3s;background:var(--wh)}
-.ac2:hover{box-shadow:0 6px 28px rgba(18,85,160,0.1);transform:translateY(-3px);border-color:var(--bll)}
-.aci{font-size:1.9rem;margin-bottom:0.85rem;display:block}
-.ac2 h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--bd);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.45rem}
-.ac2 p{font-size:0.78rem;color:var(--mu);line-height:1.6}
-
-/* ── ZONE ── */
-#zone{background:var(--off)}
-.zl{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.ztags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:1.6rem}
-.zt{padding:0.32rem 0.85rem;border-radius:2px;font-size:0.77rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border:1px solid;transition:all 0.2s}
-.zt.main{background:var(--bll);color:var(--wh);border-color:var(--bll)}
-.zt.sec{background:var(--wh);color:var(--mu);border-color:var(--bdr)}
-.zt.sec:hover{border-color:var(--bll);color:var(--bll)}
-.znote{margin-top:1.4rem;font-size:0.82rem;color:var(--mu);font-style:italic;line-height:1.7}
-.mapbox{background:var(--wh);border:1px solid var(--bdr);border-radius:10px;padding:2rem;display:flex;align-items:center;justify-content:center}
-
-/* ── CONTATTI ── */
-#contatti{background:var(--bd);position:relative;overflow:hidden}
-#contatti::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 10% 50%,rgba(18,85,160,0.35) 0%,transparent 60%)}
-#contatti .sl{color:var(--sky)}
-#contatti h2{color:var(--wh)}
-#contatti h2 .ac{color:var(--yel)}
-#contatti .si{color:rgba(255,255,255,0.42)}
-.cl{display:grid;grid-template-columns:1fr 1fr;gap:4rem;position:relative;z-index:1}
-.cit{display:flex;align-items:center;gap:1rem;padding:1rem 1.1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(75,174,232,0.14);border-radius:6px;margin-bottom:0.7rem;text-decoration:none;color:var(--wh);transition:all 0.2s}
-.cit:hover{background:rgba(75,174,232,0.1);border-color:rgba(75,174,232,0.38)}
-.cico{width:40px;height:40px;border-radius:6px;background:rgba(249,200,0,0.12);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
-.clbl{font-size:0.65rem;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.08em}
-.cval{font-size:0.92rem;font-weight:700;color:var(--wh);margin-top:0.08rem}
-.pvb{margin-top:1.4rem;padding:1.4rem;background:var(--yel);border-radius:6px;text-align:center}
-.pvb h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.3rem;color:var(--bd);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem}
-.pvb p{font-size:0.8rem;color:var(--bm);line-height:1.6}
-
-/* FORM MANUTENZIONE */
-.cform{background:rgba(255,255,255,0.04);border:1px solid rgba(75,174,232,0.14);border-radius:10px;padding:2.2rem}
-.mbn{background:rgba(249,200,0,0.1);border:1px solid rgba(249,200,0,0.4);border-radius:8px;padding:1.3rem 1.5rem;margin-bottom:1.5rem;display:flex;gap:0.9rem;align-items:flex-start}
-.mbt{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--yel);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem}
-.mbn p{font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.65}
-.mlinks{margin-top:0.9rem;display:flex;flex-direction:column;gap:0.5rem}
-.mlink{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.07);border:1px solid rgba(75,174,232,0.25);border-radius:5px;padding:0.6rem 1rem;color:var(--yel);text-decoration:none;font-size:0.88rem;font-weight:700;transition:all 0.2s}
-.mlink:hover{background:rgba(75,174,232,0.15)}
-.fg{margin-bottom:1.1rem}
-.fg label{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.4rem}
-.fg input,.fg textarea,.fg select{width:100%;padding:0.72rem 0.95rem;background:rgba(255,255,255,0.04);border:1px solid rgba(75,174,232,0.1);border-radius:5px;color:rgba(255,255,255,0.25);font-family:'Lato',sans-serif;font-size:0.88rem;outline:none;cursor:not-allowed;opacity:0.5}
-.fg textarea{resize:none;min-height:85px}
-.fgr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.bsm{width:100%;padding:0.95rem;background:rgba(249,200,0,0.25);color:rgba(255,255,255,0.45);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(249,200,0,0.3);border-radius:5px;cursor:not-allowed}
-
-/* POPUP */
-#mp{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center}
-#mp.open{display:flex}
-.pb{background:#0d2f5e;border:2px solid rgba(249,200,0,0.5);border-radius:14px;padding:2.5rem;max-width:420px;width:90%;text-align:center;animation:fu 0.3s ease}
-.pi{font-size:3rem;margin-bottom:0.8rem}
-.pt{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;color:var(--yel);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem}
-.pp{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:1.5rem}
-.pe{display:block;background:var(--yel);color:#081b36;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.9rem;border-radius:5px;text-decoration:none;margin-bottom:0.6rem;transition:background 0.2s}
-.pe:hover{background:var(--yd)}
-.pth{display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(75,174,232,0.3);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.9rem;border-radius:5px;text-decoration:none;margin-bottom:1.2rem;transition:all 0.2s}
-.pth:hover{background:rgba(75,174,232,0.15)}
-.pc{background:none;border:none;color:rgba(255,255,255,0.3);font-size:0.82rem;cursor:pointer;text-decoration:underline}
-
-/* FOOTER */
-footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
-.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
-.fbr{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.15rem;color:var(--wh);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem}
-.fbr span{color:var(--yel)}
-.fde{font-size:0.8rem;color:rgba(255,255,255,0.28);line-height:1.75}
-.fc h5{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-bottom:1rem}
-.fc ul{list-style:none}
-.fc ul li{margin-bottom:0.5rem}
-.fc ul li a{font-size:0.8rem;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s}
-.fc ul li a:hover{color:var(--yel)}
-.fbot{max-width:1100px;margin:2rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
-.fcp{font-size:0.72rem;color:rgba(255,255,255,0.18)}
-
-/* RESPONSIVE */
-@media(max-width:860px){
-  nav{padding:0 1.5rem}
-  .nl{display:none}
-  .hbg{display:flex}
-  .nl.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--bd);padding:1.5rem 2rem 2rem;gap:1.2rem;border-bottom:2px solid var(--yel);z-index:199}
-  section{padding:4rem 1.5rem}
-  .ag,.mg,.zl,.cl{grid-template-columns:1fr;gap:2.5rem}
-  .fgr{grid-template-columns:1fr}
-  .fi{grid-template-columns:1fr;gap:2rem}
-  .fbot{flex-direction:column;text-align:center}
-  .hstats{flex-direction:column}
-  .hs{border-right:none;border-bottom:1px solid rgba(255,255,255,0.15)}
-  h1{font-size:2.4rem}
-  footer{padding:2.5rem 1.5rem}
-  .strip{padding:0.9rem 1.5rem;gap:1rem}
-}
-</style>
-</head>
-<body>
-
-<!-- POPUP MANUTENZIONE -->
-<div id="mp">
-  <div class="pb">
-    <div class="pi">🔧</div>
-    <div class="pt">Sistema in manutenzione</div>
-    <p class="pp">Il sistema di invio delle richieste è momentaneamente in fase di manutenzione.<br>Ti invitiamo a contattarci direttamente:</p>
-    <a href="mailto:infiltrazioni2011@gmail.com" class="pe">✉️ Invia Email</a>
-    <a href="tel:+393473402443" class="pth">📞 347 340 2443</a>
-    <button class="pc" onclick="closeP()">Chiudi</button>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav id="mainNav">
-  <div class="nb">Ricerca <span>Perdite</span> &amp; Infiltrazioni</div>
-  <ul class="nl" id="navLinks">
-    <li><a href="#chisiamo">Chi siamo</a></li>
-    <li><a href="#servizi">Servizi</a></li>
-    <li><a href="#tecnologie">Tecnologie</a></li>
-    <li><a href="#achi">A chi</a></li>
-    <li><a href="#zone">Zone</a></li>
-    <li><a href="tel:+393473402443" class="nt">📞 347 340 2443</a></li>
-    <li><a href="#contatti" class="nc">Preventivo gratuito</a></li>
-  </ul>
-  <div class="hbg" id="hbg" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hbg2"></div>
-  <div class="hgr"></div>
-  <div class="drops" id="drops"></div>
-  <div class="splash"></div>
-  <div class="hi">
-    <div class="hbadge">Studio Tecnico Specializzato · Tutto il Territorio Nazionale</div>
-    <h1>
-      <span class="qst">Hai problemi di infiltrazioni,</span>
-      <span class="qst">umidit&agrave; e muffe?</span>
-      <span class="ac">Noi li risolviamo.</span>
-    </h1>
-    <p class="hsub">Tecnologie avanzate e non invasive — termografia, gas traccianti, droni, videoispezione — per diagnosi precise senza demolire. Report tecnico dettagliato al termine di ogni indagine.</p>
-    <div class="hpills">
-      <span class="pill">🌡️ Termografia</span>
-      <span class="pill">🔬 Gas Traccianti</span>
-      <span class="pill">🚁 Droni</span>
-      <span class="pill">🎥 Videoispezione</span>
-      <span class="pill">💧 Igrometria</span>
-      <span class="pill">🗺️ Mappatura Sottoservizi</span>
-    </div>
-    <div class="hact">
-      <a href="#contatti" class="by">Preventivo gratuito →</a>
-      <a href="#servizi" class="bo">Scopri i servizi</a>
-    </div>
-    <div class="hstats">
-      <div class="hs"><span class="hsv">100%</span><div class="hsl">Non invasivo</div></div>
-      <div class="hs"><span class="hsv">6+</span><div class="hsl">Tecnologie diagnostiche</div></div>
-      <div class="hs"><span class="hsv">Tutta Italia</span><div class="hsl">Territorio coperto</div></div>
-      <div class="hs"><span class="hsv">CTU / CTP</span><div class="hsl">Supporto tecnico</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- STRIP -->
-<div class="strip">
-  <div class="sri">✅ Diagnosi non invasiva</div>
-  <div class="sri">📋 Report tecnico dettagliato</div>
-  <div class="sri">🎁 Preventivi gratuiti</div>
-  <div class="sri">🇮🇹 Operativi in tutta Italia</div>
-</div>
-
-<!-- CHI SIAMO -->
-<section id="chisiamo">
-  <div class="ct">
-    <div class="ag">
-      <div class="rv">
-        <div class="sl">Chi siamo</div>
-        <h2>Studio tecnico <span class="ac">specializzato</span></h2>
-        <p>Il nostro <strong>team di professionisti tecnici qualificati</strong> offre supporto specializzato nella ricerca di perdite ed infiltrazioni negli edifici, collaborando con aziende leader del settore.</p>
-        <p>Utilizziamo <strong>tecnologie avanzate e non invasive</strong> — termografia, gas traccianti, rilevatori di umidità, videoispezioni, droni e tracciamento di liquidi — per individuare le perdite con precisione.</p>
-        <p>Al termine delle indagini viene fornito un <strong>report tecnico dettagliato</strong> con la descrizione delle problematiche individuate e le proposte di intervento mirate, senza compromettere le strutture.</p>
-        <div class="th2">A chi ci rivolgiamo</div>
-        <div class="chips">
-          <span class="chip">Privati</span><span class="chip">Imprese Edili</span><span class="chip">Architetti</span>
-          <span class="chip">Ingegneri</span><span class="chip">Geometri</span><span class="chip">Studi Tecnici</span>
-          <span class="chip">Amm. Condominio</span><span class="chip">CTU</span><span class="chip">CTP</span>
-        </div>
-      </div>
-      <div class="av rv">
-        <div class="tl">
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Termografia</div><div class="td3">Telecamera termica ad alta risoluzione</div></div><span class="tbg">Non invasivo</span></div>
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Gas Traccianti</div><div class="td3">Localizzazione precisa perdite occulte</div></div><span class="tbg">Non invasivo</span></div>
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Igrometro</div><div class="td3">Rilevamento umidità in strutture</div></div><span class="tbg">Non invasivo</span></div>
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Videoispezione</div><div class="td3">Ispezione interna tubazioni</div></div><span class="tbg">Non invasivo</span></div>
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Droni</div><div class="td3">Coperture e aree inaccessibili</div></div><span class="tbg">Non invasivo</span></div>
-          <div class="ti"><div class="td2"></div><div><div class="tn2">Tracciamento Liquidi</div><div class="td3">Percorsi idraulici occulti</div></div><span class="tbg">Non invasivo</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVIZI -->
-<section id="servizi">
-  <div class="ct">
-    <div class="rv">
-      <div class="sl">Cosa facciamo</div>
-      <h2>I nostri <span class="ac">servizi</span></h2>
-      <p class="si">Ogni intervento si conclude con un report tecnico dettagliato, con descrizione delle problematiche e proposte di soluzione mirata.</p>
-    </div>
-    <div class="sg">
-      <div class="sc rv"><span class="sci">💧</span><h3>Ricerca Perdite Acqua</h3><p>Localizzazione precisa di perdite occulte in impianti e tubazioni, senza demolizioni.</p><ul><li>Tubazioni e impianti idrici</li><li>Scarichi e impianti bagni</li><li>Riscaldamento e raffrescamento</li><li>Impianti antincendio</li></ul></div>
-      <div class="sc rv"><span class="sci">🏚️</span><h3>Infiltrazioni Acqua Piovana</h3><p>Individuazione della sorgente di infiltrazioni da elementi dell'involucro edilizio.</p><ul><li>Terrazzi e giardini pensili</li><li>Coperture piane e inclinate</li><li>Facciate e pareti perimetrali</li><li>Manti impermeabili</li></ul></div>
-      <div class="sc rv"><span class="sci">🌡️</span><h3>Ispezioni Termografiche</h3><p>Analisi con telecamera termica professionale. Evidenzia anomalie invisibili a occhio nudo.</p><ul><li>Ponti termici e dispersioni</li><li>Umidità nascosta nelle strutture</li><li>Difetti costruttivi e anomalie</li><li>Certificazione termografica</li></ul></div>
-      <div class="sc rv"><span class="sci">🗺️</span><h3>Mappatura Sottoservizi</h3><p>Rilevamento e tracciamento di tubazioni e sottoservizi interrati o annegati nelle strutture.</p><ul><li>Mappatura reti idriche e fognarie</li><li>Tracciamento cavi e condotte</li><li>Documentazione georeferenziata</li><li>Planimetria aggiornata</li></ul></div>
-      <div class="sc rv"><span class="sci">🧪</span><h3>Collaudi Manti Impermeabili</h3><p>Verifica dell'efficacia e integrità dei manti impermeabili, prima e dopo i lavori.</p><ul><li>Test di tenuta idraulica</li><li>Collaudo post-posa</li><li>Verifica garanzie tecniche</li><li>Certificazione scritta</li></ul></div>
-      <div class="sc rv"><span class="sci">📋</span><h3>Perizie &amp; Supporto CTU/CTP</h3><p>Perizie tecniche e supporto specializzato per consulenti tecnici d'ufficio e di parte.</p><ul><li>Perizie per privati e condomini</li><li>Supporto indagini CTU e CTP</li><li>Documentazione per uso legale</li><li>Assistenza in sede processuale</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- TECNOLOGIE -->
-<section id="tecnologie">
-  <div class="ct">
-    <div class="rv">
-      <div class="sl">Strumentazione</div>
-      <h2>Tecnologie <span class="ac">avanzate</span> e non invasive</h2>
-      <p class="si">Strumentazione professionale di ultima generazione per diagnosi precise senza causare danni alle strutture.</p>
-    </div>
-    <div class="tg">
-      <div class="tc rv"><span class="tci">🌡️</span><h4>Termocamera</h4><p>Alta risoluzione termica per anomalie di temperatura, umidità e ponti termici.</p></div>
-      <div class="tc rv"><span class="tci">🔬</span><h4>Gas Traccianti</h4><p>Miscela idrogeno/azoto per localizzare perdite in tubazioni interrate o annegate.</p></div>
-      <div class="tc rv"><span class="tci">💧</span><h4>Igrometro</h4><p>Misura il contenuto di umidità in pareti, solai e pavimenti senza forature.</p></div>
-      <div class="tc rv"><span class="tci">🎥</span><h4>Videoispezione</h4><p>Telecamera endoscopica per l'ispezione interna di tubazioni, scarichi e cavità.</p></div>
-      <div class="tc rv"><span class="tci">🚁</span><h4>Droni</h4><p>Ispezione aerea di coperture, facciate e aree inaccessibili ad alta definizione.</p></div>
-      <div class="tc rv"><span class="tci">🔵</span><h4>Tracciamento Liquidi</h4><p>Liquidi fluorescenti per il tracciamento di percorsi idraulici e infiltrazioni.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- METODO -->
-<section id="metodo" style="background:var(--off)">
-  <div class="ct">
-    <div class="mg">
-      <div class="rv">
-        <div class="sl">Come lavoriamo</div>
-        <h2>Metodo <span class="ac">preciso</span>, risultati certi</h2>
-        <p class="si" style="margin-bottom:2.2rem">Ogni intervento segue un protocollo rigoroso per garantire diagnosi accurate e soluzioni mirate.</p>
-        <div class="steps">
-          <div class="step"><div class="sn">01</div><div><h4>Contatto e preventivo</h4><p>Descrivi il problema via email o telefono. Valutiamo il caso e forniamo un preventivo gratuito e senza impegno.</p></div></div>
-          <div class="step"><div class="sn">02</div><div><h4>Sopralluogo diagnostico</h4><p>Il nostro team interviene con la strumentazione idonea. L'indagine è completamente non invasiva.</p></div></div>
-          <div class="step"><div class="sn">03</div><div><h4>Analisi e localizzazione</h4><p>Elaborazione dei dati per la localizzazione precisa della sorgente del problema.</p></div></div>
-          <div class="step"><div class="sn">04</div><div><h4>Report tecnico dettagliato</h4><p>Documento completo con termogrammi, fotografie, analisi delle cause e indicazioni per la risoluzione definitiva.</p></div></div>
-        </div>
-      </div>
-      <div class="tpanel rv">
-        <div class="tph"><span class="tptit">Analisi Termografica</span><span class="tplive">SCAN ATTIVO</span></div>
-        <div class="timg">
-          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;border-radius:6px">
-            <defs>
-              <radialGradient id="g1" cx="32%" cy="58%" r="28%"><stop offset="0%" stop-color="#ff3d00"/><stop offset="45%" stop-color="#ff8f00"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-              <radialGradient id="g2" cx="68%" cy="32%" r="22%"><stop offset="0%" stop-color="#ffd600"/><stop offset="60%" stop-color="#ff8f00" stop-opacity=".5"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-              <linearGradient id="sc" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ff3d00"/><stop offset="40%" stop-color="#ffd600"/><stop offset="80%" stop-color="#1565c0"/><stop offset="100%" stop-color="#0a1f3c"/></linearGradient>
-            </defs>
-            <rect width="320" height="200" fill="#071325"/><rect width="320" height="200" fill="url(#g1)"/><rect width="320" height="200" fill="url(#g2)"/>
-            <rect x="190" y="110" width="120" height="80" rx="3" fill="#0a2244" opacity=".75"/>
-            <rect x="0" y="0" width="80" height="75" rx="3" fill="#071020" opacity=".65"/>
-            <line x1="0" y1="50" x2="320" y2="50" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <line x1="0" y1="100" x2="320" y2="100" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <line x1="0" y1="150" x2="320" y2="150" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <line x1="80" y1="0" x2="80" y2="200" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <line x1="160" y1="0" x2="160" y2="200" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <line x1="240" y1="0" x2="240" y2="200" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <circle cx="102" cy="116" r="20" fill="none" stroke="#ff3d00" stroke-width="1.5" stroke-dasharray="5 3" opacity=".85"/>
-            <line x1="102" y1="94" x2="102" y2="103" stroke="#ff3d00" stroke-width="1.5" opacity=".85"/>
-            <line x1="102" y1="129" x2="102" y2="138" stroke="#ff3d00" stroke-width="1.5" opacity=".85"/>
-            <line x1="80" y1="116" x2="89" y2="116" stroke="#ff3d00" stroke-width="1.5" opacity=".85"/>
-            <line x1="115" y1="116" x2="124" y2="116" stroke="#ff3d00" stroke-width="1.5" opacity=".85"/>
-            <rect x="122" y="108" width="52" height="16" rx="3" fill="rgba(255,61,0,.85)"/>
-            <text x="148" y="119" text-anchor="middle" font-family="monospace" font-size="9" fill="white">26.4°C</text>
-            <rect x="298" y="18" width="10" height="164" rx="2" fill="url(#sc)"/>
-            <text x="296" y="16" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(255,255,255,.4)">30°</text>
-            <text x="296" y="188" text-anchor="end" font-family="monospace" font-size="7" fill="rgba(255,255,255,.4)">10°</text>
-          </svg>
-        </div>
-        <div class="tread">
-          <div class="tr"><div class="trv" style="color:#ff6d3b">26.4°C</div><div class="trl">Anomalia</div></div>
-          <div class="tr"><div class="trv" style="color:#42a5f5">14.8°C</div><div class="trl">Ambiente</div></div>
-          <div class="tr"><div class="trv" style="color:#fdd835">+11.6°</div><div class="trl">Delta T</div></div>
-        </div>
-        <div class="rpb"><span style="font-size:1.1rem">📄</span><p><strong>Report Tecnico Incluso</strong>Ogni intervento include report dettagliato con termogrammi, foto e proposte di soluzione.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- A CHI -->
-<section id="achi">
-  <div class="ct">
-    <div class="rv">
-      <div class="sl">A chi ci rivolgiamo</div>
-      <h2>Professionisti e <span class="ac">privati</span></h2>
-      <p class="si">Il nostro servizio è pensato per tutte le figure del settore edile e per chi ha necessità di un partner affidabile per la gestione di problematiche legate a infiltrazioni e perdite.</p>
-    </div>
-    <div class="acg">
-      <div class="ac2 rv"><span class="aci">🏠</span><h4>Privati</h4><p>Proprietari di immobili con problemi di umidità, perdite o infiltrazioni che necessitano di diagnosi certa prima dei lavori.</p></div>
-      <div class="ac2 rv"><span class="aci">🏗️</span><h4>Imprese Edili</h4><p>Aziende che necessitano di supporto diagnostico specializzato per la gestione di cantieri e problematiche tecniche.</p></div>
-      <div class="ac2 rv"><span class="aci">🏢</span><h4>Amm. Condominio</h4><p>Gestione professionale delle controversie condominiali legate a infiltrazioni, con documentazione tecnica a supporto.</p></div>
-      <div class="ac2 rv"><span class="aci">📐</span><h4>Tecnici &amp; Progettisti</h4><p>Architetti, ingegneri, geometri e studi tecnici che cercano un partner specializzato per la diagnostica edile.</p></div>
-      <div class="ac2 rv"><span class="aci">⚖️</span><h4>CTU &amp; CTP</h4><p>Supporto tecnico specializzato per consulenti tecnici d'ufficio e di parte in procedimenti giudiziali.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ZONE -->
-<section id="zone">
-  <div class="ct">
-    <div class="zl">
-      <div class="rv">
-        <div class="sl">Dove operiamo</div>
-        <h2>Tutto il <span class="ac">territorio</span> nazionale</h2>
-        <p class="si">Operiamo principalmente in Nord e Centro Italia con interventi frequenti, ma siamo disponibili su tutto il territorio nazionale.</p>
-        <div class="ztags">
-          <span class="zt main">Lombardia</span><span class="zt main">Piemonte</span><span class="zt main">Veneto</span>
-          <span class="zt main">Emilia-Romagna</span><span class="zt main">Liguria</span><span class="zt main">Friuli V.G.</span>
-          <span class="zt main">Trentino</span><span class="zt main">Toscana</span><span class="zt main">Lazio</span>
-          <span class="zt main">Umbria</span><span class="zt main">Marche</span><span class="zt main">Abruzzo</span>
-          <span class="zt sec">Campania</span><span class="zt sec">Puglia</span><span class="zt sec">Sicilia</span><span class="zt sec">Sardegna</span>
-        </div>
-        <p class="znote">🔵 Regioni in blu: zone di intervento principale e frequente.<br>Le altre regioni sono coperte su richiesta.</p>
-      </div>
-      <div class="mapbox rv">
-        <svg viewBox="0 0 220 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:260px">
-          <path d="M30,60 L50,40 L80,35 L110,30 L140,35 L160,50 L170,65 L165,80 L155,90 L140,95 L120,100 L100,105 L80,100 L60,95 L45,85 L30,75 Z" fill="rgba(21,101,192,0.32)" stroke="#1565c0" stroke-width="1.5"/>
-          <path d="M70,105 L90,100 L110,105 L130,100 L150,95 L160,110 L165,130 L155,150 L140,165 L125,170 L110,172 L95,168 L80,158 L68,140 L65,120 Z" fill="rgba(21,101,192,0.2)" stroke="#1565c0" stroke-width="1.5"/>
-          <path d="M80,175 L95,170 L110,173 L128,172 L145,168 L155,155 L162,170 L165,190 L158,210 L148,225 L138,235 L130,248 L120,258 L108,260 L95,252 L85,238 L78,218 L74,198 Z" fill="rgba(100,150,200,0.1)" stroke="#6ba3c8" stroke-width="1" stroke-dasharray="4 3"/>
-          <ellipse cx="100" cy="322" rx="35" ry="18" fill="rgba(100,150,200,0.08)" stroke="#6ba3c8" stroke-width="1" stroke-dasharray="4 3"/>
-          <text x="100" y="68" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#1976d2">NORD ITALIA</text>
-          <text x="118" y="135" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#1976d2">CENTRO</text>
-          <text x="125" y="210" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6ba3c8">Sud Italia</text>
-          <text x="100" y="325" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#6ba3c8">Sicilia</text>
-          <circle cx="95" cy="52" r="4" fill="#1565c0" opacity=".9"/><circle cx="75" cy="60" r="3" fill="#1565c0" opacity=".7"/>
-          <circle cx="115" cy="128" r="4" fill="#1565c0" opacity=".9"/><circle cx="100" cy="148" r="3" fill="#1565c0" opacity=".7"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTATTI -->
-<section id="contatti">
-  <div class="ct">
-    <div class="cl">
-      <div class="rv">
-        <div class="sl">Contattaci</div>
-        <h2>Preventivo <span class="ac">gratuito</span></h2>
-        <p class="si" style="margin-bottom:1.8rem">Descrivi sommariamente la problematica e i tuoi recapiti: ti risponderemo rapidamente con una valutazione e un preventivo senza impegno.</p>
-        <a href="mailto:infiltrazioni2011@gmail.com" class="cit">
-          <div class="cico">✉️</div><div><div class="clbl">Email</div><div class="cval">infiltrazioni2011@gmail.com</div></div>
-        </a>
-        <a href="tel:+393473402443" class="cit">
-          <div class="cico">📞</div><div><div class="clbl">Telefono</div><div class="cval">347 340 2443</div></div>
-        </a>
-        <div class="cit" style="cursor:default">
-          <div class="cico">🕐</div><div><div class="clbl">Disponibilità</div><div class="cval">Lun – Sab, 8:00 – 19:00</div></div>
-        </div>
-        <div class="cit" style="cursor:default">
-          <div class="cico">🇮🇹</div><div><div class="clbl">Copertura</div><div class="cval">Tutto il territorio nazionale</div></div>
-        </div>
-        <div class="pvb">
-          <h3>🎁 Preventivi sempre gratuiti</h3>
-          <p>Inviaci una email con la descrizione del problema e i tuoi recapiti. Ti risponderemo il prima possibile.</p>
-        </div>
-      </div>
-      <div class="cform rv">
-        <div class="mbn">
-          <span style="font-size:1.6rem;flex-shrink:0">🔧</span>
-          <div>
-            <div class="mbt">Sistema in fase di manutenzione</div>
-            <p>Il sistema di invio delle richieste è momentaneamente in fase di manutenzione. Contattaci direttamente:</p>
-            <div class="mlinks">
-              <a href="mailto:infiltrazioni2011@gmail.com" class="mlink">✉️ infiltrazioni2011@gmail.com</a>
-              <a href="tel:+393473402443" class="mlink">📞 347 340 2443</a>
-            </div>
-          </div>
-        </div>
-        <div class="fg"><label>Nome e cognome *</label><input type="text" placeholder="Mario Rossi" onfocus="openP()" readonly /></div>
-        <div class="fgr">
-          <div class="fg"><label>Telefono *</label><input type="tel" placeholder="+39 ..." onfocus="openP()" readonly /></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="name@email.com" onfocus="openP()" readonly /></div>
-        </div>
-        <div class="fg"><label>Tipo di problema *</label><select onclick="openP()"><option>Seleziona...</option></select></div>
-        <div class="fg"><label>Città / Regione *</label><input type="text" placeholder="es. Milano, Lombardia" onfocus="openP()" readonly /></div>
-        <div class="fg"><label>Descrizione del problema</label><textarea placeholder="Descrivi la problematica..." onfocus="openP()" readonly></textarea></div>
-        <button class="bsm" onclick="openP()">🔧 Sistema temporaneamente in manutenzione</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="fi">
-    <div>
-      <div class="fbr">Ricerca <span>Perdite</span> &amp; Infiltrazioni</div>
-      <p class="fde">Studio tecnico specializzato in diagnostica non invasiva di perdite, infiltrazioni e umidità. Operativi su tutto il territorio nazionale.</p>
-    </div>
-    <div class="fc">
-      <h5>Servizi</h5>
-      <ul>
-        <li><a href="#servizi">Ricerca Perdite</a></li>
-        <li><a href="#servizi">Infiltrazioni</a></li>
-        <li><a href="#servizi">Termografia</a></li>
-        <li><a href="#servizi">Mappatura Sottoservizi</a></li>
-        <li><a href="#servizi">Collaudi</a></li>
-        <li><a href="#servizi">Perizie &amp; CTU/CTP</a></li>
-      </ul>
-    </div>
-    <div class="fc">
-      <h5>Contatti</h5>
-      <ul>
-        <li><a href="mailto:infiltrazioni2011@gmail.com">infiltrazioni2011@gmail.com</a></li>
-        <li><a href="tel:+393473402443">347 340 2443</a></li>
-        <li><a href="#zone">Zone operative</a></li>
-        <li><a href="#contatti">Preventivo gratuito</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fbot">
-    <div class="fcp">© 2025 Ricerca Perdite &amp; Infiltrazioni – Studio Tecnico Specializzato · P.IVA da inserire</div>
-    <div class="fcp">Operativi in tutta Italia · Preventivi gratuiti</div>
-  </div>
-</footer>
-
-<script>
-// Gocce animate realistiche
-const dc = document.getElementById('drops');
-for(let i=0;i<25;i++){
-  const d = document.createElement('div');
-  d.className = 'drop';
-  const size = Math.random()*6+3;
-  d.style.cssText = `
-    left:${Math.random()*100}%;
-    width:${size}px;
-    height:${size*1.6}px;
-    background:rgba(255,255,255,${Math.random()*0.3+0.1});
-    animation-duration:${Math.random()*4+3}s;
-    animation-delay:${Math.random()*6}s;
-  `;
-  dc.appendChild(d);
+:root {
+  --bg: #050a18;
+  --card: #0d1428;
+  --accent: #f9c800;
+  --text: #e0e6ed;
+  --text-dim: rgba(224, 230, 237, 0.6);
 }
 
-// Menu hamburger
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
-document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: var(--bg); 
+  color: var(--text); 
+  line-height: 1.6; 
+  overflow-x: hidden;
+}
 
-// Scroll reveal
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:0.1});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+/* Navigazione */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center;
+  background: rgba(5, 10, 24, 0.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.logo { font-weight: 800; font-size: 1.1rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
 
-// Nav shadow
-window.addEventListener('scroll',()=>{document.getElementById('mainNav').style.boxShadow=window.scrollY>60?'0 4px 24px rgba(0,0,0,0.4)':'none'});
+/* Hero Section con Effetto Gocce */
+.hero {
+  padding: 180px 5% 120px; text-align: center; position: relative;
+  background: radial-gradient(circle at top, #102e7a 0%, #050a18 80%);
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content { position: relative; z-index: 10; pointer-events: none; }
+.hero-content h1 { font-size: clamp(2.3rem, 5.5vw, 3.8rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; color: #fff; }
+.hero-content p { max-width: 700px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.8); font-size: 1.15rem; }
 
-// Popup manutenzione
-function openP(){document.getElementById('mp').classList.add('open')}
-function closeP(){document.getElementById('mp').classList.remove('open')}
-document.getElementById('mp').addEventListener('click',function(e){if(e.target===this)closeP()});
-</script>
-</body>
-</html>
+/* Pulsanti (Stato Disabilitato) */
+.btn { 
+  display: inline-block; background: var(--accent); color: #000; 
+  padding: 1rem 2.5rem; border-radius: 6px; font-weight: 700; 
+  text-decoration: none; transition: 0.3s; border: none; font-size: 1rem;
+  pointer-events: auto;
+}
+.btn-disabled { background: #333; color: #777; cursor: not-allowed; opacity: 0.7; }
+
+/* --- ENGINE GOCCE D'ACQUA --- */
+#drop-container {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1; pointer-events: none;
+}
+.water-drop {
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-100px); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
+/* Sezioni */
+.section { padding: 100px 5%; max-width: 1100px; margin: 0 auto; }
+h2 { font-size: 2.3rem; margin-bottom: 3.5rem; text-align: center; font-weight: 800; }
+
+/* Blocco 1: Problemi */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+.card { background: var(--card); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.04); }
+.card h3 { color: var(--accent); margin-bottom: 1.2rem; font-size: 1.5rem; }
+.list-error { list-style: none; color: var(--text-dim); }
+.list-error li { margin-bottom: 0.9rem; padding-left: 28px; position: relative; }
+.list-error li::before { content: "✕"; position: absolute; left: 0; color: #ff5f5f; font-weight: bold; }
+
+/* Blocco 2: Diagnostica */
+.diag-item { border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 20px; }
+.diag-item h4 { font-size: 1.3rem
