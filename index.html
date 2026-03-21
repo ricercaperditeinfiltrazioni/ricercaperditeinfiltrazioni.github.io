@@ -28,7 +28,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Lato',sans-serif;color:var(--txt);background:var(--wh);overflow-x:hidden}
-#bgcanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,31,60,0.96);backdrop-filter:blur(14px);border-bottom:2px solid var(--yel);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px}
@@ -46,9 +45,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,31,60,0.9
 /* ── HERO – sfondo azzurro/blu chiaro con gocce ── */
 #hero{
   min-height:100vh;
-  background:transparent;
+  background:linear-gradient(160deg,#1a4a7a 0%,#1e5f96 35%,#2478b5 65%,#1a6aaa 100%);
   display:flex;flex-direction:column;justify-content:center;
-  padding:8rem 3rem 5rem;position:relative;overflow:hidden;z-index:2
+  padding:8rem 3rem 5rem;position:relative;overflow:hidden
 }
 /* cerchi luce */
 .hbg2{position:absolute;inset:0;
@@ -63,9 +62,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,31,60,0.9
   background-size:48px 48px
 }
 /* gocce animate */
-.drops{display:none}
-.drop{display:none}
-.splash{display:none}
+.drops{position:absolute;inset:0;pointer-events:none}
+.drop{position:absolute;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;animation:dropfall linear infinite;opacity:0}
+@keyframes dropfall{
+  0%{transform:translateY(-30px) scaleY(1);opacity:0}
+  5%{opacity:0.7}
+  85%{opacity:0.5}
+  95%{transform:translateY(100vh) scaleY(1.4);opacity:0.2}
+  100%{transform:translateY(100vh) scaleY(0.8);opacity:0}
+}
+/* splash al fondo */
+.splash{position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent)}
 
 .hi{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%}
 .hbadge{
@@ -299,14 +306,11 @@ footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
     <div class="pi">🔧</div>
     <div class="pt">Sistema in manutenzione</div>
     <p class="pp">Il sistema di invio delle richieste è momentaneamente in fase di manutenzione.<br>Ti invitiamo a contattarci direttamente:</p>
-    <a href="/cdn-cgi/l/email-protection#82ebece4ebeef6f0e3f8ebedecebb0b2b3b3c2e5efe3ebeeace1edef" class="pe">✉️ Invia Email</a>
+    <a href="mailto:infiltrazioni2011@gmail.com" class="pe">✉️ Invia Email</a>
     <a href="tel:+393473402443" class="pth">📞 347 340 2443</a>
     <button class="pc" onclick="closeP()">Chiudi</button>
   </div>
 </div>
-
-<!-- CANVAS SFONDO GOCCE INTERATTIVO -->
-<canvas id="bgcanvas"></canvas>
 
 <!-- NAV -->
 <nav id="mainNav">
@@ -554,8 +558,8 @@ footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
         <div class="sl">Contattaci</div>
         <h2>Preventivo <span class="ac">gratuito</span></h2>
         <p class="si" style="margin-bottom:1.8rem">Descrivi sommariamente la problematica e i tuoi recapiti: ti risponderemo rapidamente con una valutazione e un preventivo senza impegno.</p>
-        <a href="/cdn-cgi/l/email-protection#8ae3e4ece3e6fef8ebf0e3e5e4e3b8babbbbcaede7ebe3e6a4e9e5e7" class="cit">
-          <div class="cico">✉️</div><div><div class="clbl">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="2d44434b4441595f4c57444243441f1d1c1c6d4a404c4441034e4240">[email&#160;protected]</span></div></div>
+        <a href="mailto:infiltrazioni2011@gmail.com" class="cit">
+          <div class="cico">✉️</div><div><div class="clbl">Email</div><div class="cval">infiltrazioni2011@gmail.com</div></div>
         </a>
         <a href="tel:+393473402443" class="cit">
           <div class="cico">📞</div><div><div class="clbl">Telefono</div><div class="cval">347 340 2443</div></div>
@@ -578,7 +582,7 @@ footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
             <div class="mbt">Sistema in fase di manutenzione</div>
             <p>Il sistema di invio delle richieste è momentaneamente in fase di manutenzione. Contattaci direttamente:</p>
             <div class="mlinks">
-              <a href="/cdn-cgi/l/email-protection#5930373f30352d2b3823303637306b696868193e34383035773a3634" class="mlink">✉️ <span class="__cf_email__" data-cfemail="147d7a727d786066756e7d7b7a7d26242525547379757d783a777b79">[email&#160;protected]</span></a>
+              <a href="mailto:infiltrazioni2011@gmail.com" class="mlink">✉️ infiltrazioni2011@gmail.com</a>
               <a href="tel:+393473402443" class="mlink">📞 347 340 2443</a>
             </div>
           </div>
@@ -618,7 +622,7 @@ footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
     <div class="fc">
       <h5>Contatti</h5>
       <ul>
-        <li><a href="/cdn-cgi/l/email-protection#82ebece4ebeef6f0e3f8ebedecebb0b2b3b3c2e5efe3ebeeace1edef"><span class="__cf_email__" data-cfemail="7910171f10150d0b1803101617104b494848391e14181015571a1614">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:infiltrazioni2011@gmail.com">infiltrazioni2011@gmail.com</a></li>
         <li><a href="tel:+393473402443">347 340 2443</a></li>
         <li><a href="#zone">Zone operative</a></li>
         <li><a href="#contatti">Preventivo gratuito</a></li>
@@ -631,136 +635,39 @@ footer{background:#050f1e;padding:3rem;border-top:2px solid var(--yel)}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── CANVAS GOCCE INTERATTIVE ──
-const canvas = document.getElementById('bgcanvas');
-const ctx = canvas.getContext('2d');
-let W, H, drops = [];
-let mouse = {x:-999, y:-999};
-let isMoving = false;
-let moveTimer = null;
-const isMobile = window.matchMedia('(hover:none)').matches;
-
-function resizeCanvas(){
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = document.documentElement.scrollHeight;
+<script>
+// Gocce animate realistiche
+const dc = document.getElementById('drops');
+for(let i=0;i<25;i++){
+  const d = document.createElement('div');
+  d.className = 'drop';
+  const size = Math.random()*6+3;
+  d.style.cssText = `
+    left:${Math.random()*100}%;
+    width:${size}px;
+    height:${size*1.6}px;
+    background:rgba(255,255,255,${Math.random()*0.3+0.1});
+    animation-duration:${Math.random()*4+3}s;
+    animation-delay:${Math.random()*6}s;
+  `;
+  dc.appendChild(d);
 }
-
-class Drop {
-  constructor(){ this.reset(true) }
-  reset(init){
-    this.x = Math.random()*W;
-    this.y = init ? Math.random()*H : -30;
-    this.r = Math.random()*18+8;
-    this.vx = (Math.random()-0.5)*0.3;
-    this.vy = Math.random()*0.6+0.3;
-    this.alpha = Math.random()*0.45+0.2;
-    this.wobble = Math.random()*Math.PI*2;
-  }
-  update(){
-    const dx = this.x - mouse.x - window.scrollX;
-    const dy = this.y - mouse.y - window.scrollY;
-    const dist = Math.sqrt(dx*dx+dy*dy);
-    const range = 110;
-    if(dist < range && dist > 0){
-      const force = (range-dist)/range * 2.8;
-      if(isMobile){
-        // su mobile: seguono il dito
-        this.vx += -(dx/dist)*force*0.05;
-        this.vy += -(dy/dist)*force*0.05;
-      } else {
-        if(isMoving){
-          // mouse in movimento: scappano
-          this.vx -= (dx/dist)*force*0.14;
-          this.vy -= (dy/dist)*force*0.08;
-        } else {
-          // mouse fermo: si avvicinano lentamente
-          this.vx += -(dx/dist)*force*0.018;
-          this.vy += -(dy/dist)*force*0.018;
-        }
-      }
-    }
-    this.wobble += 0.025;
-    this.vx += Math.sin(this.wobble)*0.012;
-    this.vy += 0.025;
-    this.vx *= 0.982;
-    this.vy = Math.min(this.vy, 2.8);
-    this.x += this.vx;
-    this.y += this.vy;
-    if(this.y > H+30 || this.x < -40 || this.x > W+40) this.reset(false);
-  }
-  draw(){
-    ctx.save();
-    ctx.globalAlpha = this.alpha;
-    const g = ctx.createRadialGradient(this.x-this.r*0.3, this.y-this.r*0.35, this.r*0.05, this.x, this.y, this.r);
-    g.addColorStop(0,'rgba(255,255,255,0.98)');
-    g.addColorStop(0.35,'rgba(180,220,255,0.7)');
-    g.addColorStop(1,'rgba(80,160,230,0.08)');
-    ctx.fillStyle = g;
-    ctx.beginPath();
-    ctx.ellipse(this.x, this.y+this.r*0.15, this.r*0.72, this.r, 0, 0, Math.PI*2);
-    ctx.fill();
-    ctx.globalAlpha = this.alpha*0.4;
-    ctx.strokeStyle = 'rgba(255,255,255,0.6)';
-    ctx.lineWidth = 0.8;
-    ctx.stroke();
-    // riflesso
-    ctx.globalAlpha = this.alpha*0.85;
-    ctx.fillStyle = 'rgba(255,255,255,0.95)';
-    ctx.beginPath();
-    ctx.ellipse(this.x-this.r*0.28, this.y-this.r*0.3, this.r*0.18, this.r*0.11, -0.5, 0, Math.PI*2);
-    ctx.fill();
-    ctx.restore();
-  }
-}
-
-resizeCanvas();
-for(let i=0;i<45;i++) drops.push(new Drop());
-
-// mouse events
-document.addEventListener('mousemove', e=>{
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-  isMoving = true;
-  clearTimeout(moveTimer);
-  moveTimer = setTimeout(()=>{ isMoving = false; }, 150);
-});
-document.addEventListener('mouseleave', ()=>{ mouse.x=-999; mouse.y=-999; });
-
-// touch events
-document.addEventListener('touchmove', e=>{
-  mouse.x = e.touches[0].clientX;
-  mouse.y = e.touches[0].clientY;
-},{passive:true});
-document.addEventListener('touchend', ()=>{ mouse.x=-999; mouse.y=-999; });
-
-window.addEventListener('resize', ()=>{ resizeCanvas(); });
-window.addEventListener('scroll', ()=>{ resizeCanvas(); });
-
-function drawBg(){
-  const scrollY = window.scrollY;
-  const grad = ctx.createLinearGradient(0, scrollY, W, scrollY+H);
-  grad.addColorStop(0,'#1a4a7a');
-  grad.addColorStop(0.45,'#1e6aaa');
-  grad.addColorStop(1,'#2478b5');
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, W, canvas.height);
-  // griglia
-  ctx.fillStyle='rgba(255,255,255,0.03)';
-  for(let x=0;x<W;x+=48) ctx.fillRect(x,0,1,canvas.height);
-  for(let y=0;y<canvas.height;y+=48) ctx.fillRect(0,y,W,1);
-}
-
-function loop(){
-  drawBg();
-  drops.forEach(d=>{ d.update(); d.draw(); });
-  requestAnimationFrame(loop);
-}
-loop();
 
 // Menu hamburger
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
 document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 
 // Scroll reveal
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:0.1});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Nav shadow
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').style.boxShadow=window.scrollY>60?'0 4px 24px rgba(0,0,0,0.4)':'none'});
+
+// Popup manutenzione
+function openP(){document.getElementById('mp').classList.add('open')}
+function closeP(){document.getElementById('mp').classList.remove('open')}
+document.getElementById('mp').addEventListener('click',function(e){if(e.target===this)closeP()});
+</script>
+</body>
+</html>
