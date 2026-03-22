@@ -17,7 +17,7 @@
 .contatti-single { max-width: 680px; margin: 0 auto; }
 
 .btn-open-form {
-  display: inline-flex; align-items: center; gap: 0.6rem;
+  display: inline-flex; align-items: center; gap: 0.7rem;
   background: linear-gradient(135deg, #ffd700, #ffaa00);
   border: none; border-radius: 50px; color: #07192b; cursor: pointer;
   font-family: 'Exo 2', sans-serif; font-size: 1.05rem; font-weight: 700;
@@ -27,6 +27,7 @@
 }
 .btn-open-form:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,215,0,0.45); }
 
+/* ── MODAL FORM ── */
 .nf-modal-overlay {
   display: none; position: fixed; inset: 0;
   background: rgba(7,25,43,0.93); z-index: 2000;
@@ -98,6 +99,7 @@
 .nf-notice { background: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.35); border-radius: 6px; padding: 0.6rem 1rem; font-size: 0.88rem; font-weight: 500; color: #ffd700; margin-top: 0.4rem; display: none; }
 .nf-notice.show { display: block; }
 
+/* ── UPLOAD ── */
 .nf-upload-area {
   border: 2px dashed rgba(0,180,255,0.3); border-radius: 8px;
   padding: 1.5rem 1rem; text-align: center; cursor: pointer;
@@ -115,11 +117,57 @@
 .nf-chip-remove { cursor: pointer; color: #8aafc7; font-size: 0.9rem; }
 .nf-chip-remove:hover { color: #ff4444; }
 
-.nf-btn-submit { width: 100%; background: linear-gradient(135deg, #ffd700, #ffaa00); border: none; border-radius: 50px; color: #07192b; cursor: pointer; font-family: 'Exo 2', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; padding: 1rem 2rem; margin-top: 1.8rem; text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s; box-shadow: 0 4px 20px rgba(255,215,0,0.25); display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+/* ── SUBMIT BUTTON ── */
+.nf-btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  border: 3px solid rgba(180,120,0,0.6);
+  border-radius: 50px; color: #07192b; cursor: pointer;
+  font-family: 'Exo 2', sans-serif; font-size: 1.1rem; font-weight: 700;
+  letter-spacing: 0.1em; padding: 1rem 2rem; margin-top: 1.8rem;
+  text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+  box-shadow: 0 4px 20px rgba(255,215,0,0.25);
+  display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+}
+.nf-btn-submit .btn-icon { font-size: 2rem; line-height: 1; }
 .nf-btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,215,0,0.4); }
 .nf-btn-submit:active { transform: translateY(0); }
 .nf-btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
+/* ── POPUP CARICAMENTO ── */
+.nf-loading-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(7,25,43,0.88); z-index: 4000;
+  align-items: center; justify-content: center;
+}
+.nf-loading-overlay.show { display: flex; }
+.nf-loading-box {
+  background: #0d2d4a; border: 1px solid rgba(0,180,255,0.3);
+  border-radius: 14px; padding: 2.5rem 2rem;
+  max-width: 400px; width: 90%; text-align: center;
+}
+.nf-loading-spinner {
+  font-size: 2.5rem; margin-bottom: 1rem;
+  animation: nfSpin 1.5s linear infinite;
+  display: inline-block;
+}
+@keyframes nfSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.nf-loading-title { font-family: 'Exo 2', sans-serif; font-size: 1.1rem; font-weight: 600; color: #e8f4fd; margin-bottom: 0.5rem; }
+.nf-loading-sub { font-size: 0.88rem; color: #8aafc7; margin-bottom: 1.2rem; font-family: 'Exo 2', sans-serif; }
+.nf-progress-bar-wrap {
+  background: rgba(0,180,255,0.1); border: 1px solid rgba(0,180,255,0.2);
+  border-radius: 20px; height: 10px; overflow: hidden; margin-top: 0.5rem;
+}
+.nf-progress-bar {
+  height: 100%; background: linear-gradient(90deg, #00b4ff, #0077aa);
+  border-radius: 20px; width: 0%; transition: width 0.3s ease;
+}
+.nf-progress-label {
+  font-family: 'Exo 2', sans-serif; font-size: 0.9rem; font-weight: 600;
+  color: #00b4ff; margin-top: 0.6rem;
+}
+
+/* ── MODAL SUCCESSO ── */
 .nf-success-overlay { display: none; position: fixed; inset: 0; background: rgba(7,25,43,0.92); z-index: 3000; align-items: center; justify-content: center; }
 .nf-success-overlay.show { display: flex; }
 .nf-success-box { background: #0d2d4a; border: 1px solid #00b4ff; border-radius: 14px; padding: 2.5rem 2rem; max-width: 460px; width: 90%; text-align: center; }
@@ -166,10 +214,8 @@
 <section class="section-dark">
   <div class="container">
     <div class="contatti-single">
-
       <div class="section-label">Come contattarci</div>
       <h2>Siamo <span class="accent">disponibili</span><br>per te</h2>
-
       <p>Per richiedere un preventivo è sufficiente inviarci un'email o chiamarci direttamente. Indica sommariamente il tipo di problema riscontrato e la tua zona: ti risponderemo il prima possibile.</p>
 
       <button class="btn-open-form" onclick="nfOpenModal()">✉️ Compila la richiesta</button>
@@ -197,7 +243,6 @@
         <h4>🎁 Preventivi sempre gratuiti</h4>
         <p>Non ti chiediamo nessun impegno. Descrivi il problema, indica la città/regione e i tuoi recapiti: ti risponderemo con una valutazione tecnica preliminare.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -237,6 +282,19 @@
     <span>Operativi in tutta Italia · Lun–Sab 8:00–19:00</span>
   </div>
 </footer>
+
+<!-- ══ POPUP CARICAMENTO ══ -->
+<div class="nf-loading-overlay" id="nfLoadingOverlay">
+  <div class="nf-loading-box">
+    <div class="nf-loading-spinner">⏳</div>
+    <div class="nf-loading-title">Caricamento file in corso...</div>
+    <div class="nf-loading-sub">Attendere il completamento dell'invio dei file</div>
+    <div class="nf-progress-bar-wrap">
+      <div class="nf-progress-bar" id="nfProgressBar"></div>
+    </div>
+    <div class="nf-progress-label" id="nfProgressLabel">0%</div>
+  </div>
+</div>
 
 <!-- ══ MODAL FORM ══ -->
 <div class="nf-modal-overlay" id="nfModalOverlay">
@@ -369,17 +427,18 @@
 
       <div class="nf-section">Allegati (opzionale)</div>
       <div class="nf-upload-area" id="nfUploadArea">
-        <input type="file" id="nfFileInput" multiple accept="image/jpeg,image/png,image/gif,image/webp,.pdf" onchange="nfHandleFiles(this.files)"/>
+        <input type="file" id="nfFileInput" multiple accept="*/*" onchange="nfHandleFiles(this.files)"/>
         <div class="nf-upload-icon">📎</div>
         <div class="nf-upload-label">
           <strong>Clicca o trascina qui i file</strong>
-          <small>Immagini JPG, PNG o PDF — max 5 file, 10MB ciascuno</small>
+          <small>Immagini, PDF, DWG, archivi (ZIP, RAR...) e altri formati — in caso di più file è consigliabile creare un archivio compresso</small>
         </div>
       </div>
       <div class="nf-file-chips" id="nfFileChips"></div>
-      <div style="font-size:0.78rem;color:#8aafc7;margin-top:0.5rem;">📁 I file vengono salvati nel tuo Google Drive. Riceverai il link nella mail.</div>
 
-      <button type="submit" class="nf-btn-submit"><span>✉️</span> Invia Richiesta</button>
+      <button type="submit" class="nf-btn-submit">
+        <span class="btn-icon">✉️</span> Invia Richiesta
+      </button>
     </form>
   </div>
 </div>
@@ -483,7 +542,6 @@ nfComuneInput.addEventListener('input', function() {
 });
 document.addEventListener('click', e => { if (!e.target.closest('#nfComuneWrap')) nfAcList.classList.remove('show'); });
 document.getElementById('nfProv').addEventListener('input', function() { this.value = this.value.toUpperCase(); });
-
 document.getElementById('nfAltroChk').addEventListener('change', function() {
   document.getElementById('nfAltroField').style.display = this.checked ? 'block' : 'none';
 });
@@ -492,8 +550,7 @@ document.getElementById('nfAltroChk').addEventListener('change', function() {
 let nfSelectedFiles = [];
 function nfHandleFiles(files) {
   for (let f of files) {
-    if (nfSelectedFiles.length >= 5) { alert('Massimo 5 file.'); break; }
-    if (f.size > 10 * 1024 * 1024) { alert(f.name + ' supera i 10MB.'); continue; }
+    if (nfSelectedFiles.length >= 5) { alert('Massimo 5 file. Per più file usa un archivio compresso (ZIP, RAR).'); break; }
     if (!nfSelectedFiles.find(x => x.name === f.name)) nfSelectedFiles.push(f);
   }
   nfRenderChips();
@@ -511,7 +568,13 @@ ua.addEventListener('dragover', e => { e.preventDefault(); ua.style.borderColor=
 ua.addEventListener('dragleave', () => { ua.style.borderColor=''; });
 ua.addEventListener('drop', e => { e.preventDefault(); ua.style.borderColor=''; nfHandleFiles(e.dataTransfer.files); });
 
-// Converti file in base64
+// Progress bar
+function nfSetProgress(pct) {
+  document.getElementById('nfProgressBar').style.width = pct + '%';
+  document.getElementById('nfProgressLabel').textContent = pct + '%';
+}
+
+// File to base64
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -560,39 +623,45 @@ document.getElementById('nfForm').addEventListener('submit', async function(e) {
   const btn = this.querySelector('.nf-btn-submit');
   btn.disabled = true;
 
-  // Step 1: carica file su Drive se presenti
   let linkCartella = '';
+
   if (nfSelectedFiles.length > 0) {
-    btn.innerHTML = '<span>⏳</span> Caricamento file su Drive...';
+    // Mostra popup caricamento
+    document.getElementById('nfLoadingOverlay').classList.add('show');
+    nfSetProgress(0);
+
     try {
       const payload = { nome: nome };
       for (let i = 0; i < nfSelectedFiles.length; i++) {
         const f = nfSelectedFiles[i];
+        nfSetProgress(Math.round((i / nfSelectedFiles.length) * 70));
         payload['file_' + i] = await fileToBase64(f);
         payload['name_' + i] = f.name;
-        payload['mime_' + i] = f.type;
+        payload['mime_' + i] = f.type || 'application/octet-stream';
       }
+      nfSetProgress(80);
+
       const driveRes = await fetch(DRIVE_SCRIPT_URL, {
         method: 'POST',
         body: new URLSearchParams(payload)
       });
+      nfSetProgress(95);
       const driveData = await driveRes.json();
-      if (driveData.success) {
-        linkCartella = driveData.cartella;
-      }
+      nfSetProgress(100);
+
+      if (driveData.success) linkCartella = driveData.cartella;
     } catch(err) {
-      console.warn('Drive upload error:', err);
+      console.warn('Upload error:', err);
     }
+
+    document.getElementById('nfLoadingOverlay').classList.remove('show');
   }
 
   if (linkCartella) {
-    document.getElementById('nfAllegati').value = '📁 Cartella Google Drive con allegati:\n' + linkCartella;
+    document.getElementById('nfAllegati').value = 'Cartella allegati:\n' + linkCartella;
   }
 
-  // Step 2: invia form via Web3Forms
-  btn.innerHTML = '<span>⏳</span> Invio messaggio...';
   const formData = new FormData(this);
-
   try {
     const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
     const data = await res.json();
@@ -611,7 +680,7 @@ document.getElementById('nfForm').addEventListener('submit', async function(e) {
     alert('Errore di rete. Contattaci a infiltrazioni2011@gmail.com');
   }
 
-  btn.innerHTML = '<span>✉️</span> Invia Richiesta';
+  btn.innerHTML = '<span class="btn-icon">✉️</span> Invia Richiesta';
   btn.disabled = false;
 });
 </script>
