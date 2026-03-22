@@ -13,6 +13,67 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+/* ── SEZIONE ITALIA ── */
+.italia-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.italia-img-box {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.italia-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 32px rgba(0,180,255,0.18));
+  transition: filter 0.3s;
+}
+
+.italia-img-box img:hover {
+  filter: drop-shadow(0 12px 40px rgba(0,180,255,0.35));
+}
+
+.italia-caption {
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.05rem;
+  color: var(--muted, #8aafc7);
+  font-weight: 400;
+  max-width: 480px;
+}
+
+.italia-caption strong {
+  color: var(--wh, #e8f4fd);
+}
+
+.italia-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 600px;
+}
+
+.italia-badge {
+  background: rgba(0,180,255,0.08);
+  border: 1px solid rgba(0,180,255,0.25);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.85rem;
+  color: #00b4ff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+</style>
 </head>
 <body>
 
@@ -55,122 +116,72 @@
     </div>
 
     <div class="collab-grid">
-
       <div class="collab-card rv">
         <div class="collab-icon">🏛️</div>
         <div class="collab-title">Architetti & Ingegneri</div>
         <div class="collab-desc">Supporto diagnostico per progettisti che devono individuare la causa di infiltrazioni o perdite prima di definire un intervento di ripristino. Forniamo dati tecnici precisi per una progettazione mirata.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">📐</div>
         <div class="collab-title">Geometri & Studi Tecnici</div>
         <div class="collab-desc">Collaborazione continuativa con studi tecnici che gestiscono patrimoni immobiliari o seguono cantieri dove emergono problematiche di umidità e infiltrazioni.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">🏢</div>
         <div class="collab-title">Amministratori di Condominio</div>
         <div class="collab-desc">Partner tecnico di fiducia per la gestione delle problematiche condominiali. Interveniamo rapidamente per localizzare la responsabilità (parti comuni vs unità private) con documentazione tecnica ufficiale.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">⚖️</div>
         <div class="collab-title">CTU & CTP</div>
         <div class="collab-desc">Supporto tecnico specializzato per Consulenti Tecnici d'Ufficio e di parte in cause legali. Produciamo report con valore tecnico-legale riconosciuto, con documentazione fotografica e strumentale.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">🔨</div>
         <div class="collab-title">Imprese Edili</div>
         <div class="collab-desc">Collaborazione con imprese che necessitano di diagnostica pre-intervento per evitare lavori inutili o eccessivi. Localizziamo il problema, l'impresa interviene solo dove necessario.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">🏠</div>
         <div class="collab-title">Privati & Committenti</div>
         <div class="collab-desc">Proprietari di immobili residenziali, commerciali o industriali che hanno problemi di infiltrazioni o perdite e necessitano di una diagnosi affidabile prima di spendere per i lavori.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">🏭</div>
         <div class="collab-title">Imprese Industriali</div>
         <div class="collab-desc">Diagnostica per capannoni, impianti produttivi e strutture industriali: coperture, impianti idrici, reti antincendio. Interveniamo anche in ambienti difficili con droni e strumentazioni avanzate.</div>
       </div>
-
       <div class="collab-card rv">
         <div class="collab-icon">🛡️</div>
         <div class="collab-title">Compagnie Assicurative</div>
         <div class="collab-desc">Perizie tecniche per la valutazione dei danni da acqua e la determinazione delle responsabilità in sinistri assicurativi legati a infiltrazioni, allagamenti e cedimenti.</div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- PROVINCE -->
+<!-- COPERTURA TERRITORIALE con immagine Italia -->
 <section class="section-light">
   <div class="container">
     <div class="section-header rv">
       <div class="section-label">Copertura territoriale</div>
       <h2>Presenti in <span class="accent">tutta Italia</span></h2>
-      <p class="section-intro">Disponiamo di una rete di tecnici e collaboratori in diverse province italiane. Operiamo con la stessa qualità e professionalità dal Nord al Sud, isole incluse.</p>
+      <p class="section-intro">Disponiamo di una rete di tecnici e collaboratori su tutto il territorio nazionale. Operiamo con la stessa qualità e professionalità ovunque, dalle grandi città ai centri più piccoli.</p>
     </div>
 
-    <div class="province-section rv">
-      <h3>Nord Italia</h3>
-      <div class="province-grid">
-        <span class="prov-badge">Milano</span>
-        <span class="prov-badge">Torino</span>
-        <span class="prov-badge">Genova</span>
-        <span class="prov-badge">Venezia</span>
-        <span class="prov-badge">Verona</span>
-        <span class="prov-badge">Bologna</span>
-        <span class="prov-badge">Brescia</span>
-        <span class="prov-badge">Bergamo</span>
-        <span class="prov-badge">Padova</span>
-        <span class="prov-badge">Trieste</span>
-        <span class="prov-badge">Modena</span>
-        <span class="prov-badge">Parma</span>
+    <div class="italia-wrap rv">
+      <div class="italia-img-box">
+        <img src="Italia.jpg" alt="Operativi in tutta Italia — Ricerca Perdite e Infiltrazioni"/>
+      </div>
+      <div class="italia-caption">
+        <strong>Operativi su tutto il territorio nazionale.</strong><br>
+        Non trovi la tua zona? Contattaci comunque — interveniamo ovunque.
+      </div>
+      <div style="text-align:center;margin-top:1rem">
+        <a href="contatti.html" class="btn-primary">Richiedi un preventivo gratuito →</a>
       </div>
     </div>
 
-    <div class="province-section rv">
-      <h3>Centro Italia</h3>
-      <div class="province-grid">
-        <span class="prov-badge">Roma</span>
-        <span class="prov-badge">Firenze</span>
-        <span class="prov-badge">Ancona</span>
-        <span class="prov-badge">Perugia</span>
-        <span class="prov-badge">Livorno</span>
-        <span class="prov-badge">Pisa</span>
-        <span class="prov-badge">Pescara</span>
-        <span class="prov-badge">L'Aquila</span>
-        <span class="prov-badge">Terni</span>
-      </div>
-    </div>
-
-    <div class="province-section rv">
-      <h3>Sud Italia & Isole</h3>
-      <div class="province-grid">
-        <span class="prov-badge">Napoli</span>
-        <span class="prov-badge">Bari</span>
-        <span class="prov-badge">Palermo</span>
-        <span class="prov-badge">Catania</span>
-        <span class="prov-badge">Reggio Calabria</span>
-        <span class="prov-badge">Salerno</span>
-        <span class="prov-badge">Messina</span>
-        <span class="prov-badge">Cagliari</span>
-        <span class="prov-badge">Cosenza</span>
-        <span class="prov-badge">Foggia</span>
-        <span class="prov-badge">Lecce</span>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3rem" class="rv">
-      <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.5rem">Non trovi la tua provincia? <strong style="color:var(--wh)">Contattaci comunque.</strong> Operiamo su tutto il territorio nazionale.</p>
-      <a href="contatti.html" class="btn-primary">Richiedi un preventivo gratuito →</a>
-    </div>
   </div>
 </section>
 
