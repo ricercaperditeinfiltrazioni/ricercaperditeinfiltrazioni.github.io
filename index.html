@@ -4,328 +4,206 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="google-site-verification" content="r3lfD-xLl5mVCRbMKAUqODSUV7tXXp7N1dzrqmAwCZc"/>
-<title>Ricerca Infiltrazioni, Muffa e Perdite | Studio Tecnico Specializzato | Italia</title>
-<meta name="description" content="Studio tecnico specializzato in ricerca perdite, infiltrazioni e muffa. Indagini non invasive: termografia, gas traccianti, videoispezione, droni. Preventivi gratuiti. Operativi in tutta Italia."/>
-<meta name="keywords" content="ricerca infiltrazioni, perdite acqua, muffa, umidita, termografia, gas traccianti, videoispezione, CTU, CTP, perizie tecniche, mappatura sottoservizi"/>
+<title>Ricerca Perdite & Infiltrazioni | Diagnostica Non Invasiva | Italia</title>
+<meta name="description" content="Studio tecnico specializzato in ricerca perdite acqua, infiltrazioni, muffa e umidità. Tecnologie non invasive: termografia, gas traccianti, videoispezione, droni. Operativi su tutto il territorio nazionale. Preventivi gratuiti."/>
+<meta name="keywords" content="ricerca perdite acqua, infiltrazioni, umidità, muffa, termografia, gas traccianti, videoispezione, mappatura sottoservizi, perizie, CTU, CTP"/>
 <meta name="robots" content="index, follow"/>
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKCBFN4M7D"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BKCBFN4M7D');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- POPUP MANUTENZIONE -->
-<div id="popup-maint" class="popup-overlay">
-  <div class="popup-box">
-    <div class="popup-icon">🔧</div>
-    <h3>Sistema in manutenzione</h3>
-    <p>Il sistema di invio è momentaneamente in manutenzione. Contattaci direttamente:</p>
-    <a href="mailto:infiltrazioni2011@gmail.com" class="popup-btn-email">✉️ Invia Email</a>
-    <a href="tel:+393473402443" class="popup-btn-tel">📞 347 340 2443</a>
-    <button class="popup-close" onclick="closePopup()">Chiudi</button>
-  </div>
-</div>
-
 <!-- NAV -->
-<nav id="mainNav">
-  <div class="nav-logo">Ricerca <span>Perdite</span> &amp; Infiltrazioni</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#chisiamo">Chi siamo</a></li>
-    <li><a href="#servizi">Servizi</a></li>
-    <li><a href="#comelavoriamo">Come lavoriamo</a></li>
-    <li><a href="#copertura">Zone</a></li>
-    <li><a href="tel:+393473402443" class="nav-tel">📞 347 340 2443</a></li>
-    <li><a href="#cta" class="nav-cta">Preventivo gratuito</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon">◈</span>
+      <span>RICERCA<strong>PERDITE</strong></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="indagini.html">Indagini</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="collaborazioni.html">Collaborazioni</a></li>
+      <li><a href="chi-siamo.html">Chi Siamo</a></li>
+      <li><a href="contatti.html" class="nav-cta">Preventivo Gratuito</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- ═══════════════════════════════════
-     HERO
-═══════════════════════════════════ -->
-<section class="hero" id="hero">
-  <canvas id="dropCanvas"></canvas>
-  <div class="hero-content rv">
-    <div class="hero-badge">Studio Tecnico Specializzato · Tutta Italia</div>
-    <h1>HAI PROBLEMI DI<br><span class="highlight-red">INFILTRAZIONI,</span><br><span class="highlight-red">MUFFA</span> O <span class="highlight-red">UMIDITÀ?</span></h1>
-    <p class="hero-sub">Indagini tecniche professionali per individuare le cause e risolvere il problema</p>
-    <div class="hero-actions">
-      <a href="#cta" class="btn-primary">Richiedi un'indagine</a>
-      <a href="#servizi" class="btn-ghost">Scopri i servizi</a>
+<!-- HERO -->
+<section id="hero">
+  <canvas id="dropsCanvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-scan"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      DIAGNOSTICA PROFESSIONALE NON INVASIVA
+    </div>
+    <h1>
+      <span class="h1-question">Hai problemi di</span>
+      <span class="h1-main">Infiltrazioni,<br>Umidità<span class="amp"> e/o</span> Muffa?</span>
+    </h1>
+    <p class="hero-sub">Richiedi un contatto con un nostro tecnico specializzato. Utilizziamo tecnologie avanzate e non invasive per individuare con precisione la fonte del problema, senza compromettere le strutture.</p>
+    <div class="hero-pills">
+      <span class="pill">▸ Termografia</span>
+      <span class="pill">▸ Gas Traccianti</span>
+      <span class="pill">▸ Videoispezione</span>
+      <span class="pill">▸ Droni</span>
+      <span class="pill">▸ Preventivi Gratuiti</span>
+    </div>
+    <div class="hero-cta">
+      <a href="contatti.html" class="btn-primary">Richiedi un Tecnico</a>
+      <a href="indagini.html" class="btn-outline">Scopri le Indagini</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-val">100%</span><span class="stat-lbl">Non invasivo</span></div>
-      <div class="stat"><span class="stat-val">6+</span><span class="stat-lbl">Tecnologie</span></div>
-      <div class="stat"><span class="stat-val">Tutta Italia</span><span class="stat-lbl">Copertura</span></div>
-      <div class="stat"><span class="stat-val">Gratuiti</span><span class="stat-lbl">Preventivi</span></div>
+      <div class="stat">
+        <span class="stat-n">15+</span>
+        <span class="stat-l">Anni di esperienza</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">100%</span>
+        <span class="stat-l">Non invasivo</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">IT</span>
+        <span class="stat-l">Tutto il territorio</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">∞</span>
+        <span class="stat-l">Preventivi gratuiti</span>
+      </div>
     </div>
+  </div>
+  <div class="hero-scroll">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- STRIP EVIDENZA -->
+<!-- STRIP -->
 <div class="strip">
-  <div class="strip-item">✅ Diagnosi NON invasiva</div>
-  <div class="strip-item">📋 Report tecnico dettagliato</div>
-  <div class="strip-item">🎁 Preventivi GRATUITI</div>
-  <div class="strip-item">🇮🇹 Operativi in tutta Italia</div>
+  <span class="strip-item">◈ Operativi in tutta Italia</span>
+  <span class="strip-sep">|</span>
+  <span class="strip-item">◈ Report tecnico dettagliato</span>
+  <span class="strip-sep">|</span>
+  <span class="strip-item">◈ Zero danni alle strutture</span>
+  <span class="strip-sep">|</span>
+  <span class="strip-item">◈ Preventivi sempre gratuiti</span>
 </div>
 
-<!-- ═══════════════════════════════════
-     CHI SIAMO
-═══════════════════════════════════ -->
-<section id="chisiamo" class="section section-light">
+<!-- PROBLEMA -->
+<section class="section-dark" id="problema">
   <div class="container">
-    <div class="section-grid">
-      <div class="rv">
-        <div class="section-label">Chi siamo</div>
-        <h2>Studio tecnico <em>specializzato</em></h2>
-        <p class="section-text">Il nostro <strong>team di professionisti tecnici qualificati</strong> offre supporto specializzato nella ricerca di perdite ed infiltrazioni negli edifici, collaborando con aziende leader e utilizzando tecnologie avanzate e non invasive, tra cui <strong>termografia, gas traccianti, rilevatori di umidità, videoispezioni, droni e tracciamento di liquidi</strong> al fine di individuare le perdite.</p>
-        <p class="section-text">Al termine delle indagini viene fornito un <strong>report tecnico dettagliato</strong> con analisi delle problematiche e soluzioni mirate.</p>
-        <div class="target-label">Ci rivolgiamo a:</div>
-        <div class="target-chips">
-          <span class="chip">Privati</span>
-          <span class="chip">Architetti</span>
-          <span class="chip">Ingegneri</span>
-          <span class="chip">Geometri</span>
-          <span class="chip">Studi Tecnici</span>
-          <span class="chip">Imprese Edili</span>
-          <span class="chip">Amm. Condominio</span>
-          <span class="chip">CTU</span>
-          <span class="chip">CTP</span>
+    <div class="section-header rv">
+      <div class="section-label">Il Problema</div>
+      <h2>Perdite nascoste,<br><span class="accent">danni evidenti</span></h2>
+      <p class="section-intro">Infiltrazioni d'acqua, muffa e umidità di risalita sono problemi che si aggravano nel tempo se non individuati e risolti alla radice. La nostra missione è trovare l'origine esatta con tecnologie che non richiedono demolizioni.</p>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card rv">
+        <div class="pcard-icon">💧</div>
+        <h3>Infiltrazioni d'acqua</h3>
+        <p>Terrazzi, balconi, coperture piane, facciate. L'acqua trova sempre un percorso nascosto fino alle strutture interne.</p>
+      </div>
+      <div class="problem-card rv">
+        <div class="pcard-icon">🔧</div>
+        <h3>Perdite in tubazioni</h3>
+        <p>Scarichi, impianti di riscaldamento, tubazioni idriche e antincendio. Perdite occulte che causano danni ingenti.</p>
+      </div>
+      <div class="problem-card rv">
+        <div class="pcard-icon">🍄</div>
+        <h3>Muffa e umidità</h3>
+        <p>Condensa, ponti termici, umidità di risalita. Problemi di salubrità degli ambienti con causa spesso non evidente.</p>
+      </div>
+      <div class="problem-card rv">
+        <div class="pcard-icon">📋</div>
+        <h3>Perizie tecniche</h3>
+        <p>Indagini per CTU e CTP, collaudi impermeabilizzazioni, documentazione tecnica per controversie legali.</p>
+      </div>
+    </div>
+    <div class="cta-center rv">
+      <a href="indagini.html" class="btn-primary">Tutte le nostre indagini →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGIE -->
+<section class="section-light" id="tecnologie">
+  <div class="container">
+    <div class="tech-layout">
+      <div class="tech-text rv">
+        <div class="section-label">Tecnologie</div>
+        <h2>Strumentazioni<br><span class="accent">Hi-Tech</span><br>Non Invasive</h2>
+        <p>Utilizziamo le strumentazioni più avanzate disponibili sul mercato per garantire diagnosi accurate senza demolizioni o danni alle strutture.</p>
+        <ul class="tech-list">
+          <li><span class="tl-icon">◈</span> <strong>Termocamere professionali</strong> — rilevano anomalie termiche invisibili ad occhio nudo</li>
+          <li><span class="tl-icon">◈</span> <strong>Gas traccianti</strong> — localizzano perdite occulte in tubazioni pressurizzate</li>
+          <li><span class="tl-icon">◈</span> <strong>Videoispezione endoscopica</strong> — ispezione interna di tubazioni e cavità</li>
+          <li><span class="tl-icon">◈</span> <strong>Droni con termocamera</strong> — ispezione di coperture e facciate in quota</li>
+          <li><span class="tl-icon">◈</span> <strong>Rilevatori di umidità</strong> — mappatura precisa dell'umidità nelle strutture</li>
+          <li><span class="tl-icon">◈</span> <strong>Georadar (GPR)</strong> — mappatura dei sottoservizi e strutture interrate</li>
+        </ul>
+        <a href="indagini.html" class="btn-outline-dark">Approfondisci le indagini →</a>
+      </div>
+      <div class="tech-visual rv">
+        <div class="tech-card-big">
+          <div class="tcb-label">TERMOGRAFIA IR</div>
+          <div class="tcb-screen">
+            <div class="thermo-sim">
+              <div class="t-hot"></div>
+              <div class="t-warm"></div>
+              <div class="t-cool"></div>
+              <div class="t-cold"></div>
+              <div class="t-scan-line"></div>
+            </div>
+            <div class="tcb-legend">
+              <span class="leg-hot">ANOMALIA TERMICA RILEVATA</span>
+            </div>
+          </div>
+          <div class="tcb-data">
+            <div class="tcb-d"><span>ΔT</span> +4.7°C</div>
+            <div class="tcb-d"><span>STATUS</span> PERDITA</div>
+            <div class="tcb-d"><span>COORD</span> 42.3/18.7</div>
+          </div>
         </div>
       </div>
-      <div class="tech-panel rv">
-        <div class="tech-panel-title">Tecnologie utilizzate</div>
-        <div class="tech-list">
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Termografia IR</strong><small>Rileva umidità e ponti termici nascosti</small></div><span class="tech-badge">Non invasivo</span></div>
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Gas Traccianti</strong><small>Localizza perdite in tubazioni interrate</small></div><span class="tech-badge">Non invasivo</span></div>
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Igrometro Prof.</strong><small>Mappatura umidità strutturale</small></div><span class="tech-badge">Non invasivo</span></div>
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Videoispezione 4K</strong><small>Ispezione interna tubazioni</small></div><span class="tech-badge">Non invasivo</span></div>
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Droni</strong><small>Coperture e aree inaccessibili</small></div><span class="tech-badge">Non invasivo</span></div>
-          <div class="tech-item"><span class="tech-dot"></span><div><strong>Tracciamento Liquidi</strong><small>Percorsi idraulici occulti</small></div><span class="tech-badge">Non invasivo</span></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SERVIZI
-═══════════════════════════════════ -->
-<section id="servizi" class="section section-dark">
+<!-- CONTATTO RAPIDO -->
+<section class="section-cta">
   <div class="container">
-    <div class="rv">
-      <div class="section-label light">I nostri servizi</div>
-      <h2 class="light">SERVIZI <em>OFFERTI</em></h2>
-      <p class="section-text light">Ogni intervento utilizza strumentazione certificata e si conclude con report tecnico dettagliato.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card rv">
-        <span class="service-icon">💧</span>
-        <h3>Infiltrazioni Acqua Piovana</h3>
-        <p>Ricerca infiltrazioni da terrazzi, giardini pensili, coperture piane e inclinate, facciate e manti impermeabili.</p>
+    <div class="cta-block rv">
+      <div class="cta-text">
+        <h2>Richiedi subito un contatto<br>con un nostro tecnico</h2>
+        <p>Descrivi brevemente la problematica. Risponderemo con una valutazione e un preventivo gratuito senza impegno.</p>
       </div>
-      <div class="service-card rv">
-        <span class="service-icon">🔧</span>
-        <h3>Perdite Tubazioni e Impianti</h3>
-        <p>Individuazione perdite in tubazioni idriche, scarichi, bagni, impianti di riscaldamento e antincendio.</p>
-      </div>
-      <div class="service-card rv">
-        <span class="service-icon">🌡️</span>
-        <h3>Ispezioni Termografiche</h3>
-        <p>Analisi con telecamera IR professionale. Evidenzia umidità nascosta, ponti termici e difetti invisibili a occhio nudo.</p>
-      </div>
-      <div class="service-card rv">
-        <span class="service-icon">🗺️</span>
-        <h3>Mappatura Sottoservizi</h3>
-        <p>Rilevamento e tracciamento di reti idriche, fognarie, cavi e condotte interrate con documentazione georeferenziata.</p>
-      </div>
-      <div class="service-card rv">
-        <span class="service-icon">🧪</span>
-        <h3>Collaudi Manti Impermeabili</h3>
-        <p>Test di tenuta idraulica, collaudo post-posa e verifica garanzie tecniche con certificazione scritta.</p>
-      </div>
-      <div class="service-card rv">
-        <span class="service-icon">⚖️</span>
-        <h3>Indagini CTU / CTP</h3>
-        <p>Supporto tecnico specializzato per consulenti tecnici d'ufficio e di parte, con perizie per uso legale.</p>
-      </div>
-    </div>
-
-    <!-- Tabella indagini -->
-    <div class="table-wrap rv">
-      <table>
-        <thead>
-          <tr>
-            <th>Indagine</th>
-            <th>Applicazione</th>
-            <th>Strumento</th>
-            <th>Invasività</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Termografia</td><td>Umidità, ponti termici</td><td>Termocamera IR</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Gas Tracciante</td><td>Perdite tubazioni interrate</td><td>Rilevatore H2/N2</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Igrometria</td><td>Mappatura umidità</td><td>Igrometro prof.</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Videoispezione</td><td>Scarichi e tubazioni</td><td>Camera 4K</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Droni</td><td>Coperture e facciate</td><td>Drone professionale</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Tracciamento Liquidi</td><td>Percorsi infiltrazioni</td><td>Liquidi fluorescenti</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Mappatura Sottoservizi</td><td>Reti interrate</td><td>Georadar / EM</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-          <tr><td>Collaudo Impermeab.</td><td>Verifica manti</td><td>Test idraulico</td><td><span class="badge-ok">Non invasivo</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════
-     COME LAVORIAMO
-═══════════════════════════════════ -->
-<section id="comelavoriamo" class="section section-light">
-  <div class="container">
-    <div class="rv">
-      <div class="section-label">Il nostro metodo</div>
-      <h2>COME <em>LAVORIAMO</em></h2>
-    </div>
-    <div class="method-highlight rv">
-      <div class="method-icon">🔍</div>
-      <p>"Se hai un problema, effettuiamo indagini tecniche <strong>NON invasive</strong> per individuare con precisione la causa e fornirti la strategia migliore per risolverlo."</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step rv">
-        <div class="step-num">01</div>
-        <h4>Contatto e preventivo</h4>
-        <p>Descrivi il problema via email o telefono. Valutiamo il caso e forniamo un preventivo gratuito senza impegno.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-num">02</div>
-        <h4>Sopralluogo diagnostico</h4>
-        <p>Il nostro team interviene con strumentazione certificata. L'indagine è completamente non invasiva.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-num">03</div>
-        <h4>Analisi e localizzazione</h4>
-        <p>Elaborazione dati per localizzare con precisione la sorgente del problema.</p>
-      </div>
-      <div class="step rv">
-        <div class="step-num">04</div>
-        <h4>Report tecnico</h4>
-        <p>"Al termine delle indagini viene fornito un <strong>report tecnico dettagliato</strong> con analisi e soluzioni mirate."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════
-     COPERTURA
-═══════════════════════════════════ -->
-<section id="copertura" class="section section-accent">
-  <div class="container rv">
-    <div class="coverage-inner">
-      <div class="coverage-text">
-        <div class="section-label light">Dove operiamo</div>
-        <h2 class="light">TUTTO IL TERRITORIO <em>NAZIONALE</em></h2>
-        <p class="light-text">Operiamo principalmente in <strong>Nord e Centro Italia</strong> con interventi frequenti. Disponibili su tutto il territorio nazionale su richiesta.</p>
-        <div class="zone-tags">
-          <span class="ztag main">Lombardia</span><span class="ztag main">Piemonte</span>
-          <span class="ztag main">Veneto</span><span class="ztag main">Emilia-Romagna</span>
-          <span class="ztag main">Liguria</span><span class="ztag main">Toscana</span>
-          <span class="ztag main">Lazio</span><span class="ztag main">Umbria</span>
-          <span class="ztag main">Marche</span><span class="ztag main">Abruzzo</span>
-          <span class="ztag sec">Campania</span><span class="ztag sec">Puglia</span>
-          <span class="ztag sec">Sicilia</span><span class="ztag sec">Sardegna</span>
-        </div>
-        <p class="zone-note">🔵 Blu = zone principali &nbsp;|&nbsp; Le altre su richiesta</p>
-      </div>
-      <div class="coverage-map">
-        <svg viewBox="0 0 220 380" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30,60 L50,40 L80,35 L110,30 L140,35 L160,50 L170,65 L165,80 L155,90 L140,95 L120,100 L100,105 L80,100 L60,95 L45,85 L30,75 Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-          <path d="M70,105 L90,100 L110,105 L130,100 L150,95 L160,110 L165,130 L155,150 L140,165 L125,170 L110,172 L95,168 L80,158 L68,140 L65,120 Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
-          <path d="M80,175 L95,170 L110,173 L128,172 L145,168 L155,155 L162,170 L165,190 L158,210 L148,225 L138,235 L130,248 L120,258 L108,260 L95,252 L85,238 L78,218 L74,198 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="4 3"/>
-          <ellipse cx="100" cy="322" rx="35" ry="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4 3"/>
-          <text x="100" y="67" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.9)">NORD ITALIA</text>
-          <text x="118" y="134" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.9)">CENTRO</text>
-          <text x="125" y="208" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">Sud Italia</text>
-          <circle cx="95" cy="52" r="5" fill="#f9c800"/><circle cx="75" cy="62" r="4" fill="#f9c800" opacity=".8"/>
-          <circle cx="115" cy="128" r="5" fill="#f9c800"/><circle cx="100" cy="148" r="4" fill="#f9c800" opacity=".8"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════
-     CTA FINALE
-═══════════════════════════════════ -->
-<section id="cta" class="section section-cta">
-  <div class="container">
-    <div class="cta-inner rv">
-      <div class="cta-badge">🎁 PREVENTIVI GRATUITI</div>
-      <h2 class="cta-title">PRONTO A RISOLVERE<br>IL TUO PROBLEMA?</h2>
-      <p class="cta-sub">Descrivi il problema e lascia i tuoi recapiti per essere ricontattato.<br>Risponderemo rapidamente con una valutazione tecnica senza impegno.</p>
-
       <div class="cta-contacts">
-        <a href="mailto:infiltrazioni2011@gmail.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
+        <a href="mailto:infiltrazioni2011@gmail.com" class="contact-item">
+          <span class="ci-icon">✉</span>
           <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-val">infiltrazioni2011@gmail.com</div>
+            <div class="ci-label">Email</div>
+            <div class="ci-val">infiltrazioni2011@gmail.com</div>
           </div>
         </a>
-        <a href="tel:+393473402443" class="contact-card">
-          <span class="contact-icon">📞</span>
+        <a href="tel:+393473402443" class="contact-item">
+          <span class="ci-icon">📞</span>
           <div>
-            <div class="contact-label">Telefono</div>
-            <div class="contact-val">347 340 2443</div>
+            <div class="ci-label">Telefono / WhatsApp</div>
+            <div class="ci-val">347 340 2443</div>
           </div>
         </a>
-        <div class="contact-card no-link">
-          <span class="contact-icon">🕐</span>
-          <div>
-            <div class="contact-label">Disponibilità</div>
-            <div class="contact-val">Lun–Sab, 8:00–19:00</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FORM IN MANUTENZIONE -->
-      <div class="form-box">
-        <div class="form-maint">
-          <span class="form-maint-icon">🔧</span>
-          <div class="form-maint-title">Sistema in manutenzione</div>
-          <p>Il sistema di invio è momentaneamente in manutenzione.<br>Contattaci direttamente via email o telefono.</p>
-          <a href="mailto:infiltrazioni2011@gmail.com" class="maint-link">✉️ infiltrazioni2011@gmail.com</a>
-          <a href="tel:+393473402443" class="maint-link">📞 347 340 2443</a>
-        </div>
-        <div class="form-fields">
-          <div class="form-row">
-            <div class="fg"><label>Nome e cognome</label><input type="text" placeholder="Mario Rossi" onfocus="openPopup()" readonly/></div>
-            <div class="fg"><label>Telefono</label><input type="tel" placeholder="+39 ..." onfocus="openPopup()" readonly/></div>
-          </div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="nome@email.com" onfocus="openPopup()" readonly/></div>
-          <div class="fg">
-            <label>Tipo di problema</label>
-            <select onclick="openPopup()">
-              <option>Seleziona il problema...</option>
-              <option>Infiltrazioni da tetto/terrazzo</option>
-              <option>Perdita acqua (tubazioni/impianti)</option>
-              <option>Umidità e muffa</option>
-              <option>Ispezione termografica</option>
-              <option>Mappatura sottoservizi</option>
-              <option>Perizia CTU/CTP</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="fg"><label>Città / Regione</label><input type="text" placeholder="es. Milano, Lombardia" onfocus="openPopup()" readonly/></div>
-          <div class="fg"><label>Descrivi il problema</label><textarea placeholder="Descrivi brevemente il problema e i tuoi recapiti..." onfocus="openPopup()" readonly></textarea></div>
-          <button class="btn-disabled" onclick="openPopup()">🔧 Sistema temporaneamente in manutenzione</button>
-        </div>
+        <a href="contatti.html" class="btn-primary" style="margin-top:1rem">Vai al modulo contatti →</a>
       </div>
     </div>
   </div>
@@ -333,39 +211,44 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Ricerca <span>Perdite</span> &amp; Infiltrazioni</div>
-        <p class="footer-desc">Studio tecnico specializzato in diagnostica non invasiva. Operativi su tutto il territorio nazionale con tecnologie avanzate e report tecnici dettagliati.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Servizi</h5>
-        <ul>
-          <li><a href="#servizi">Ricerca Infiltrazioni</a></li>
-          <li><a href="#servizi">Perdite Tubazioni</a></li>
-          <li><a href="#servizi">Termografia</a></li>
-          <li><a href="#servizi">Mappatura Sottoservizi</a></li>
-          <li><a href="#servizi">Perizie CTU/CTP</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contatti</h5>
-        <ul>
-          <li><a href="mailto:infiltrazioni2011@gmail.com">infiltrazioni2011@gmail.com</a></li>
-          <li><a href="tel:+393473402443">347 340 2443</a></li>
-          <li><a href="#copertura">Zone operative</a></li>
-          <li><a href="#cta">Preventivo gratuito</a></li>
-        </ul>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">◈ RICERCA<strong>PERDITE</strong></div>
+      <p>Studio tecnico specializzato in diagnostica non invasiva di perdite, infiltrazioni e umidità. Operativi su tutto il territorio nazionale.</p>
+      <div class="footer-contacts">
+        <a href="mailto:infiltrazioni2011@gmail.com">infiltrazioni2011@gmail.com</a>
+        <a href="tel:+393473402443">347 340 2443</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 Ricerca Perdite &amp; Infiltrazioni &mdash; P.IVA da inserire &mdash; Operativi in tutta Italia</span>
-      <span>Preventivi sempre gratuiti</span>
+    <div class="footer-col">
+      <h5>Pagine</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="indagini.html">Indagini Tecniche</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="collaborazioni.html">Collaborazioni</a></li>
+        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h5>Servizi</h5>
+      <ul>
+        <li><a href="indagini.html">Ricerca Perdite</a></li>
+        <li><a href="indagini.html">Infiltrazioni Acqua Piovana</a></li>
+        <li><a href="indagini.html">Ispezioni Termografiche</a></li>
+        <li><a href="indagini.html">Mappatura Sottoservizi</a></li>
+        <li><a href="indagini.html">Collaudi Impermeabilizzazioni</a></li>
+        <li><a href="indagini.html">Perizie CTU / CTP</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ricerca Perdite &amp; Infiltrazioni – Studio Tecnico Specializzato · P.IVA da inserire</span>
+    <span>Operativi in tutta Italia · Lun–Sab 8:00–19:00</span>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
