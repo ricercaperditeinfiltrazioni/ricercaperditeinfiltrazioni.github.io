@@ -103,62 +103,54 @@
         </div>
       </div>
 
-      <!-- FORM (MANUTENZIONE) -->
+      <!-- FORM WEB3FORMS -->
       <div class="rv">
         <div class="maint-box">
-          <div class="maint-notice">
-            <div class="maint-notice-icon">🔧</div>
-            <div>
-              <div class="maint-notice-title">Modulo contatti in fase di manutenzione</div>
-              <div class="maint-notice-text">
-                Il sistema di invio delle richieste tramite modulo è momentaneamente in fase di manutenzione. Nel frattempo puoi contattarci direttamente:
-              </div>
-              <div class="maint-links">
-                <a href="mailto:infiltrazioni2011@gmail.com" class="maint-link">✉️ infiltrazioni2011@gmail.com</a>
-                <a href="tel:+393473402443" class="maint-link">📞 347 340 2443</a>
-              </div>
-            </div>
-          </div>
-          <div class="form-fields">
-            <div class="fg">
-              <label>Nome e cognome *</label>
-              <input type="text" placeholder="Mario Rossi" readonly/>
-            </div>
-            <div class="fgr">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+            <input type="hidden" name="access_key" value="7afc8aec-8846-4aff-aae1-c189b30be225"/>
+            <input type="hidden" name="subject" value="Nuova richiesta preventivo - Sito Infiltrazioni"/>
+            <input type="hidden" name="redirect" value="https://ricercaperditeinfiltrazioni.github.io/contatti.html"/>
+            <div class="form-fields">
               <div class="fg">
-                <label>Telefono *</label>
-                <input type="tel" placeholder="+39 ..."/>
+                <label>Nome e cognome *</label>
+                <input type="text" name="nome" placeholder="Mario Rossi" required/>
+              </div>
+              <div class="fgr">
+                <div class="fg">
+                  <label>Telefono *</label>
+                  <input type="tel" name="telefono" placeholder="+39 ..." required/>
+                </div>
+                <div class="fg">
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="nome@email.com"/>
+                </div>
               </div>
               <div class="fg">
-                <label>Email</label>
-                <input type="email" placeholder="nome@email.com" readonly/>
+                <label>Tipo di problema *</label>
+                <select name="problema" required>
+                  <option value="">Seleziona...</option>
+                  <option>Infiltrazione acqua piovana</option>
+                  <option>Perdita tubazione</option>
+                  <option>Muffa / umidità</option>
+                  <option>Ispezione termografica</option>
+                  <option>Mappatura sottoservizi</option>
+                  <option>Perizia CTU/CTP</option>
+                  <option>Altro</option>
+                </select>
               </div>
+              <div class="fg">
+                <label>Città / Regione *</label>
+                <input type="text" name="citta" placeholder="es. Milano, Lombardia" required/>
+              </div>
+              <div class="fg">
+                <label>Descrizione del problema</label>
+                <textarea name="messaggio" placeholder="Descrivi la problematica sommariamente..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                ✉️ Invia Richiesta Preventivo
+              </button>
             </div>
-            <div class="fg">
-              <label>Tipo di problema *</label>
-              <select>
-                <option>Seleziona...</option>
-                <option>Infiltrazione acqua piovana</option>
-                <option>Perdita tubazione</option>
-                <option>Muffa / umidità</option>
-                <option>Ispezione termografica</option>
-                <option>Mappatura sottoservizi</option>
-                <option>Perizia CTU/CTP</option>
-                <option>Altro</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label>Città / Regione *</label>
-              <input type="text" placeholder="es. Milano, Lombardia" readonly/>
-            </div>
-            <div class="fg">
-              <label>Descrizione del problema</label>
-              <textarea placeholder="Descrivi la problematica sommariamente..." readonly></textarea>
-            </div>
-            <button class="btn-submit" disabled>
-              🔧 Modulo temporaneamente non disponibile
-            </button>
-          </div>
+          </form>
         </div>
       </div>
 
