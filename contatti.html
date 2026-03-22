@@ -4,15 +4,174 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="google-site-verification" content="r3lfD-xLl5mVCRbMKAUqODSUV7tXXp7N1dzrqmAwCZc"/>
-<title>Contatti & Preventivo Gratuito | Ricerca Perdite & Infiltrazioni</title>
+<title>Contatti & Preventivo | Ricerca Perdite & Infiltrazioni</title>
 <meta name="description" content="Contattaci per un preventivo gratuito. Email: infiltrazioni2011@gmail.com | Tel: 347 340 2443. Operativi in tutta Italia, Lun-Sab 8:00-19:00."/>
 <meta name="robots" content="index, follow"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKCBFN4M7D"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BKCBFN4M7D');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+  .new-form-wrap {
+    background: rgba(13,45,74,0.6);
+    border: 1px solid rgba(0,180,255,0.18);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .new-form-wrap .form-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+  .new-form-wrap .form-subtitle {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+  }
+  .nf-section {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--sky);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 1.8rem 0 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .nf-section::after { content:''; flex:1; height:1px; background:var(--border); }
+  .nf-fg { display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.1rem; position:relative; }
+  .nf-fgr { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.1rem; }
+  .nf-fgr3 { display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; margin-bottom:1.1rem; }
+  .nf-fgr .nf-fg, .nf-fgr3 .nf-fg { margin-bottom:0; }
+  .nf-fg label {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--sky);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nf-fg input, .nf-fg select, .nf-fg textarea {
+    background: rgba(7,25,43,0.85);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .nf-fg input:focus, .nf-fg select:focus, .nf-fg textarea:focus {
+    outline: none; border-color: var(--sky); box-shadow: 0 0 0 2px rgba(0,180,255,0.1);
+  }
+  .nf-fg input::placeholder, .nf-fg textarea::placeholder { color: var(--muted); opacity:0.55; }
+  .nf-fg select {
+    cursor:pointer; appearance:none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath stroke='%2300b4ff' stroke-width='1.5' fill='none' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem;
+  }
+  .nf-fg select option { background:#0a2137; color:#e8f4fd; }
+  .nf-fg textarea { resize:vertical; min-height:100px; }
+  .nf-autocomplete {
+    position:absolute; top:100%; left:0; right:0;
+    background:#0d2d4a; border:1px solid var(--sky); border-top:none;
+    border-radius:0 0 6px 6px; z-index:200; max-height:190px; overflow-y:auto; display:none;
+  }
+  .nf-autocomplete.show { display:block; }
+  .nf-ac-item {
+    padding:0.6rem 1rem; font-size:0.95rem; cursor:pointer;
+    color:#e8f4fd; border-bottom:1px solid rgba(0,180,255,0.07);
+    font-family:'Exo 2',sans-serif;
+  }
+  .nf-ac-item:hover { background:rgba(0,180,255,0.12); }
+  .nf-ac-item small { color:#8aafc7; font-size:0.78rem; margin-left:0.4rem; }
+  .nf-check-col { display:flex; flex-direction:column; gap:0.5rem; margin-top:0.3rem; }
+  .nf-check-item {
+    display:flex; align-items:center; gap:0.75rem;
+    background:rgba(7,25,43,0.5); border:1px solid var(--border);
+    border-radius:6px; padding:0.65rem 1rem; cursor:pointer;
+    font-family:'Exo 2',sans-serif; font-size:0.95rem; font-weight:400;
+    color:var(--text); user-select:none; transition:border-color 0.2s, background 0.2s;
+  }
+  .nf-check-item:hover { border-color:var(--sky); background:rgba(0,180,255,0.05); }
+  .nf-check-item input[type="checkbox"] { display:none; }
+  .nf-chk {
+    width:18px; height:18px; border:1.5px solid var(--muted);
+    border-radius:4px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; transition:all 0.2s;
+  }
+  .nf-check-item input:checked ~ .nf-chk { background:var(--sky); border-color:var(--sky); }
+  .nf-check-item input:checked ~ .nf-chk::after { content:'✓'; font-size:12px; color:#07192b; font-weight:bold; }
+  .nf-notice {
+    background:rgba(255,215,0,0.08); border:1px solid rgba(255,215,0,0.35);
+    border-radius:6px; padding:0.6rem 1rem; font-size:0.88rem; font-weight:500;
+    color:#ffd700; margin-top:0.4rem; display:none;
+  }
+  .nf-notice.show { display:block; }
+  .nf-upload {
+    border:2px dashed rgba(0,180,255,0.25); border-radius:8px; padding:1.3rem;
+    text-align:center; cursor:pointer; transition:border-color 0.2s, background 0.2s; margin-top:0.3rem;
+  }
+  .nf-upload:hover { border-color:var(--sky); background:rgba(0,180,255,0.03); }
+  .nf-upload input { display:none; }
+  .nf-upload-icon { font-size:1.8rem; margin-bottom:0.3rem; }
+  .nf-upload-text { font-size:0.9rem; color:var(--muted); font-family:'Exo 2',sans-serif; }
+  .nf-upload-text strong { color:var(--sky); }
+  .nf-upload-preview { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.7rem; justify-content:center; }
+  .nf-file-chip {
+    background:rgba(0,180,255,0.1); border:1px solid var(--sky); border-radius:20px;
+    padding:0.25rem 0.75rem; font-size:0.8rem; color:var(--sky);
+    display:flex; align-items:center; gap:0.4rem; font-family:'Exo 2',sans-serif;
+  }
+  .nf-rm { cursor:pointer; color:var(--muted); font-weight:bold; }
+  .nf-rm:hover { color:#ff4444; }
+  .nf-btn-submit {
+    width:100%;
+    background:linear-gradient(135deg,#ffd700,#ffaa00);
+    border:none; border-radius:50px; color:#07192b; cursor:pointer;
+    font-family:'Exo 2',sans-serif; font-size:1.1rem; font-weight:700;
+    letter-spacing:0.1em; padding:1rem 2rem; margin-top:1.8rem;
+    text-transform:uppercase; transition:transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+    box-shadow:0 4px 20px rgba(255,215,0,0.25);
+    display:flex; align-items:center; justify-content:center; gap:0.6rem;
+  }
+  .nf-btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(255,215,0,0.4); }
+  .nf-btn-submit:active { transform:translateY(0); }
+  .nf-btn-submit:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+  .nf-modal-overlay {
+    display:none; position:fixed; inset:0;
+    background:rgba(7,25,43,0.88); z-index:1000;
+    align-items:center; justify-content:center;
+  }
+  .nf-modal-overlay.show { display:flex; }
+  .nf-modal-box {
+    background:#0d2d4a; border:1px solid var(--sky); border-radius:14px;
+    padding:2.5rem 2rem; max-width:460px; width:90%; text-align:center;
+  }
+  .nf-modal-icon { font-size:3.5rem; margin-bottom:1rem; }
+  .nf-modal-title { font-family:'Exo 2',sans-serif; font-size:1.5rem; font-weight:700; color:var(--sky); margin-bottom:0.8rem; }
+  .nf-modal-text { font-size:1rem; color:var(--muted); line-height:1.7; font-family:'Exo 2',sans-serif; }
+  .nf-modal-close {
+    margin-top:2rem; background:transparent; border:2px solid var(--sky);
+    border-radius:50px; color:var(--sky); cursor:pointer;
+    font-family:'Exo 2',sans-serif; font-size:1rem; font-weight:600;
+    letter-spacing:0.08em; padding:0.7rem 2.5rem; text-transform:uppercase;
+    transition:background 0.2s,color 0.2s;
+  }
+  .nf-modal-close:hover { background:var(--sky); color:#07192b; }
+  @media(max-width:640px){
+    .nf-fgr,.nf-fgr3{grid-template-columns:1fr;}
+  }
+</style>
 </head>
 <body>
 
@@ -88,68 +247,147 @@
 
         <div class="ct-free-box">
           <h4>🎁 Preventivi sempre gratuiti</h4>
-          <p>Non ti chiediamo nessun impegno. Descrivi il problema in un'email, indica la città/regione e i tuoi recapiti: ti risponderemo con una valutazione tecnica preliminare e, se necessario, organizzeremo un sopralluogo.</p>
-        </div>
-
-        <div style="margin-top:2rem;padding:1.5rem;background:rgba(13,45,74,0.3);border:1px solid var(--border);border-radius:5px">
-          <div style="font-family:var(--ff-mono);font-size:0.65rem;color:var(--sky);letter-spacing:0.15em;margin-bottom:0.8rem">COSA INCLUDERE NELL'EMAIL</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
-            <li style="font-size:0.88rem;color:var(--muted);font-weight:300;display:flex;gap:0.6rem"><span style="color:var(--sky)">▸</span> Tipo di problema (infiltrazione, perdita, muffa...)</li>
-            <li style="font-size:0.88rem;color:var(--muted);font-weight:300;display:flex;gap:0.6rem"><span style="color:var(--sky)">▸</span> Dove si manifesta (piano, ambiente, zona)</li>
-            <li style="font-size:0.88rem;color:var(--muted);font-weight:300;display:flex;gap:0.6rem"><span style="color:var(--sky)">▸</span> Città e regione</li>
-            <li style="font-size:0.88rem;color:var(--muted);font-weight:300;display:flex;gap:0.6rem"><span style="color:var(--sky)">▸</span> Nome e recapito telefonico</li>
-            <li style="font-size:0.88rem;color:var(--muted);font-weight:300;display:flex;gap:0.6rem"><span style="color:var(--sky)">▸</span> Eventuali foto del problema (opzionale ma utile)</li>
-          </ul>
+          <p>Non ti chiediamo nessun impegno. Descrivi il problema, indica la città/regione e i tuoi recapiti: ti risponderemo con una valutazione tecnica preliminare e, se necessario, organizzeremo un sopralluogo.</p>
         </div>
       </div>
 
-      <!-- FORM WEB3FORMS -->
+      <!-- FORM -->
       <div class="rv">
-        <div class="maint-box">
-          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+        <div class="new-form-wrap">
+          <div class="form-title">📋 Richiesta Preventivo</div>
+          <div class="form-subtitle">Compila il modulo, ti risponderemo al più presto. I campi con * sono obbligatori.</div>
+
+          <form id="nfForm" novalidate>
             <input type="hidden" name="access_key" value="7afc8aec-8846-4aff-aae1-c189b30be225"/>
             <input type="hidden" name="subject" value="Nuova richiesta preventivo - Sito Infiltrazioni"/>
-            <input type="hidden" name="redirect" value="https://ricercaperditeinfiltrazioni.github.io/contatti.html"/>
-            <div class="form-fields">
-              <div class="fg">
-                <label>Nome e cognome *</label>
-                <input type="text" name="nome" placeholder="Mario Rossi" required/>
+
+            <div class="nf-section">Dati personali</div>
+            <div class="nf-fg">
+              <label>Nome e cognome *</label>
+              <input type="text" name="nome" id="nfNome" placeholder="Mario Rossi" required/>
+            </div>
+            <div class="nf-fgr">
+              <div class="nf-fg">
+                <label>Telefono / WhatsApp</label>
+                <input type="tel" name="telefono" id="nfTel" placeholder="+39 347 000 0000"/>
               </div>
-              <div class="fgr">
-                <div class="fg">
-                  <label>Telefono *</label>
-                  <input type="tel" name="telefono" placeholder="+39 ..." required/>
-                </div>
-                <div class="fg">
-                  <label>Email</label>
-                  <input type="email" name="email" placeholder="nome@email.com"/>
-                </div>
+              <div class="nf-fg">
+                <label>Email</label>
+                <input type="email" name="email" id="nfEmail" placeholder="nome@email.com"/>
               </div>
-              <div class="fg">
-                <label>Tipo di problema *</label>
-                <select name="problema" required>
+            </div>
+            <div class="nf-notice" id="nfContactNotice">
+              ⚠️ Inserisci almeno un recapito: telefono oppure email.
+            </div>
+
+            <div class="nf-section">Tipo di edificio</div>
+            <div class="nf-fgr">
+              <div class="nf-fg">
+                <label>Destinazione d'uso *</label>
+                <select name="destinazione" id="nfDest" required>
                   <option value="">Seleziona...</option>
-                  <option>Infiltrazione acqua piovana</option>
-                  <option>Perdita tubazione</option>
-                  <option>Muffa / umidità</option>
-                  <option>Ispezione termografica</option>
-                  <option>Mappatura sottoservizi</option>
-                  <option>Perizia CTU/CTP</option>
+                  <option>Residenziale</option>
+                  <option>Commerciale</option>
+                  <option>Industriale / Capannone</option>
                   <option>Altro</option>
                 </select>
               </div>
-              <div class="fg">
-                <label>Città / Regione *</label>
-                <input type="text" name="citta" placeholder="es. Milano, Lombardia" required/>
+              <div class="nf-fg">
+                <label>Tipologia edificio *</label>
+                <select name="tipologia" id="nfTipo" required>
+                  <option value="">Seleziona...</option>
+                  <option>Casa singola / Villa</option>
+                  <option>Bifamiliare</option>
+                  <option>Condominio</option>
+                  <option>Capannone / Magazzino</option>
+                  <option>Locale commerciale</option>
+                  <option>Altro</option>
+                </select>
               </div>
-              <div class="fg">
-                <label>Descrizione del problema</label>
-                <textarea name="messaggio" placeholder="Descrivi la problematica sommariamente..."></textarea>
-              </div>
-              <button type="submit" class="btn-submit">
-                ✉️ Invia Richiesta Preventivo
-              </button>
             </div>
+            <div class="nf-fgr3">
+              <div class="nf-fg" id="nfComuneWrap">
+                <label>Comune *</label>
+                <input type="text" name="comune" id="nfComune" placeholder="es. Vicenza" required autocomplete="off"/>
+                <div class="nf-autocomplete" id="nfAcList"></div>
+              </div>
+              <div class="nf-fg">
+                <label>Provincia *</label>
+                <input type="text" name="provincia" id="nfProv" placeholder="VI" required maxlength="2" style="text-transform:uppercase"/>
+              </div>
+              <div class="nf-fg">
+                <label>Regione</label>
+                <input type="text" name="regione" id="nfReg" placeholder="Veneto" style="opacity:0.7"/>
+              </div>
+            </div>
+
+            <div class="nf-section">Problematica riscontrata *</div>
+            <div class="nf-check-col">
+              <label class="nf-check-item">
+                <input type="checkbox" name="problema[]" value="Infiltrazione acqua piovana"/>
+                <span class="nf-chk"></span>
+                <span>💧 Infiltrazione acqua piovana</span>
+              </label>
+              <label class="nf-check-item">
+                <input type="checkbox" name="problema[]" value="Perdita tubazioni / impianti"/>
+                <span class="nf-chk"></span>
+                <span>🔧 Perdita tubazioni / impianti</span>
+              </label>
+              <label class="nf-check-item">
+                <input type="checkbox" name="problema[]" value="Muffa / umidità"/>
+                <span class="nf-chk"></span>
+                <span>🍄 Muffa / umidità</span>
+              </label>
+              <label class="nf-check-item">
+                <input type="checkbox" name="problema[]" value="Altro" id="nfAltroChk"/>
+                <span class="nf-chk"></span>
+                <span>📝 Altro</span>
+              </label>
+            </div>
+            <div class="nf-fg" id="nfAltroField" style="display:none;margin-top:0.7rem;">
+              <label>Specifica la problematica</label>
+              <input type="text" name="altro_problema" placeholder="Descrivi brevemente..."/>
+            </div>
+
+            <div class="nf-section">Servizi aggiuntivi</div>
+            <div class="nf-check-col">
+              <label class="nf-check-item">
+                <input type="checkbox" name="servizi[]" value="Ispezione copertura"/>
+                <span class="nf-chk"></span>
+                <span>🏠 Ispezione copertura</span>
+              </label>
+              <label class="nf-check-item">
+                <input type="checkbox" name="servizi[]" value="Mappatura sottoservizi"/>
+                <span class="nf-chk"></span>
+                <span>📡 Mappatura sottoservizi</span>
+              </label>
+              <label class="nf-check-item">
+                <input type="checkbox" name="servizi[]" value="Perizia CTU / CTP"/>
+                <span class="nf-chk"></span>
+                <span>⚖️ Perizia tecnica CTU / CTP</span>
+              </label>
+            </div>
+
+            <div class="nf-section">Descrizione</div>
+            <div class="nf-fg">
+              <label>Descrizione del problema</label>
+              <textarea name="messaggio" placeholder="Descrivi dove si manifesta il problema, da quanto tempo, se ci sono danni visibili..."></textarea>
+            </div>
+
+            <div class="nf-section">Allegati (opzionale)</div>
+            <div class="nf-upload" id="nfUpload" onclick="document.getElementById('nfFileInput').click()">
+              <input type="file" id="nfFileInput" multiple accept="image/*,.pdf" onchange="nfHandleFiles(this.files)"/>
+              <div class="nf-upload-icon">📎</div>
+              <div class="nf-upload-text">
+                <strong>Clicca per allegare file</strong><br>
+                Immagini (JPG, PNG) o PDF — max 5 file, 5MB ciascuno
+              </div>
+              <div class="nf-upload-preview" id="nfPreview"></div>
+            </div>
+
+            <button type="submit" class="nf-btn-submit">
+              <span>✉️</span> Invia Richiesta
+            </button>
           </form>
         </div>
       </div>
@@ -193,6 +431,187 @@
     <span>Operativi in tutta Italia · Lun–Sab 8:00–19:00</span>
   </div>
 </footer>
+
+<!-- MODAL SUCCESSO -->
+<div class="nf-modal-overlay" id="nfModal">
+  <div class="nf-modal-box">
+    <div class="nf-modal-icon">✅</div>
+    <div class="nf-modal-title">Richiesta inviata!</div>
+    <div class="nf-modal-text">
+      La tua richiesta è stata inviata con successo e verrà presa in carico da un nostro tecnico.<br><br>
+      Ti contatteremo al più presto per una valutazione senza impegno.
+    </div>
+    <button class="nf-modal-close" onclick="nfCloseModal()">Chiudi</button>
+  </div>
+</div>
+
 <script src="main.js"></script>
+<script>
+const nfComuni = [
+  {n:"Agrigento",p:"AG",r:"Sicilia"},{n:"Alessandria",p:"AL",r:"Piemonte"},
+  {n:"Ancona",p:"AN",r:"Marche"},{n:"Aosta",p:"AO",r:"Valle d'Aosta"},
+  {n:"Arezzo",p:"AR",r:"Toscana"},{n:"Ascoli Piceno",p:"AP",r:"Marche"},
+  {n:"Asti",p:"AT",r:"Piemonte"},{n:"Avellino",p:"AV",r:"Campania"},
+  {n:"Bari",p:"BA",r:"Puglia"},{n:"Belluno",p:"BL",r:"Veneto"},
+  {n:"Benevento",p:"BN",r:"Campania"},{n:"Bergamo",p:"BG",r:"Lombardia"},
+  {n:"Biella",p:"BI",r:"Piemonte"},{n:"Bologna",p:"BO",r:"Emilia-Romagna"},
+  {n:"Bolzano",p:"BZ",r:"Trentino-Alto Adige"},{n:"Brescia",p:"BS",r:"Lombardia"},
+  {n:"Brindisi",p:"BR",r:"Puglia"},{n:"Busto Arsizio",p:"VA",r:"Lombardia"},
+  {n:"Cagliari",p:"CA",r:"Sardegna"},{n:"Caserta",p:"CE",r:"Campania"},
+  {n:"Catania",p:"CT",r:"Sicilia"},{n:"Catanzaro",p:"CZ",r:"Calabria"},
+  {n:"Cesena",p:"FC",r:"Emilia-Romagna"},{n:"Chieti",p:"CH",r:"Abruzzo"},
+  {n:"Cinisello Balsamo",p:"MI",r:"Lombardia"},{n:"Como",p:"CO",r:"Lombardia"},
+  {n:"Cosenza",p:"CS",r:"Calabria"},{n:"Cremona",p:"CR",r:"Lombardia"},
+  {n:"Crotone",p:"KR",r:"Calabria"},{n:"Cuneo",p:"CN",r:"Piemonte"},
+  {n:"Faenza",p:"RA",r:"Emilia-Romagna"},{n:"Ferrara",p:"FE",r:"Emilia-Romagna"},
+  {n:"Firenze",p:"FI",r:"Toscana"},{n:"Foggia",p:"FG",r:"Puglia"},
+  {n:"Foligno",p:"PG",r:"Umbria"},{n:"Forlì",p:"FC",r:"Emilia-Romagna"},
+  {n:"Frosinone",p:"FR",r:"Lazio"},{n:"Gallarate",p:"VA",r:"Lombardia"},
+  {n:"Genova",p:"GE",r:"Liguria"},{n:"Gorizia",p:"GO",r:"Friuli-Venezia Giulia"},
+  {n:"Grosseto",p:"GR",r:"Toscana"},{n:"Guidonia Montecelio",p:"RM",r:"Lazio"},
+  {n:"Imola",p:"BO",r:"Emilia-Romagna"},{n:"Imperia",p:"IM",r:"Liguria"},
+  {n:"Isernia",p:"IS",r:"Molise"},{n:"L'Aquila",p:"AQ",r:"Abruzzo"},
+  {n:"La Spezia",p:"SP",r:"Liguria"},{n:"Latina",p:"LT",r:"Lazio"},
+  {n:"Lecce",p:"LE",r:"Puglia"},{n:"Lecco",p:"LC",r:"Lombardia"},
+  {n:"Livorno",p:"LI",r:"Toscana"},{n:"Lodi",p:"LO",r:"Lombardia"},
+  {n:"Lucca",p:"LU",r:"Toscana"},{n:"Macerata",p:"MC",r:"Marche"},
+  {n:"Mantova",p:"MN",r:"Lombardia"},{n:"Matera",p:"MT",r:"Basilicata"},
+  {n:"Messina",p:"ME",r:"Sicilia"},{n:"Milano",p:"MI",r:"Lombardia"},
+  {n:"Modena",p:"MO",r:"Emilia-Romagna"},{n:"Moncalieri",p:"TO",r:"Piemonte"},
+  {n:"Monza",p:"MB",r:"Lombardia"},{n:"Napoli",p:"NA",r:"Campania"},
+  {n:"Nichelino",p:"TO",r:"Piemonte"},{n:"Novara",p:"NO",r:"Piemonte"},
+  {n:"Nuoro",p:"NU",r:"Sardegna"},{n:"Olbia",p:"SS",r:"Sardegna"},
+  {n:"Oristano",p:"OR",r:"Sardegna"},{n:"Padova",p:"PD",r:"Veneto"},
+  {n:"Palermo",p:"PA",r:"Sicilia"},{n:"Parma",p:"PR",r:"Emilia-Romagna"},
+  {n:"Pavia",p:"PV",r:"Lombardia"},{n:"Perugia",p:"PG",r:"Umbria"},
+  {n:"Pesaro",p:"PU",r:"Marche"},{n:"Pescara",p:"PE",r:"Abruzzo"},
+  {n:"Piacenza",p:"PC",r:"Emilia-Romagna"},{n:"Pisa",p:"PI",r:"Toscana"},
+  {n:"Pistoia",p:"PT",r:"Toscana"},{n:"Pordenone",p:"PN",r:"Friuli-Venezia Giulia"},
+  {n:"Potenza",p:"PZ",r:"Basilicata"},{n:"Prato",p:"PO",r:"Toscana"},
+  {n:"Ragusa",p:"RG",r:"Sicilia"},{n:"Ravenna",p:"RA",r:"Emilia-Romagna"},
+  {n:"Reggio Calabria",p:"RC",r:"Calabria"},{n:"Reggio Emilia",p:"RE",r:"Emilia-Romagna"},
+  {n:"Rho",p:"MI",r:"Lombardia"},{n:"Rieti",p:"RI",r:"Lazio"},
+  {n:"Rimini",p:"RN",r:"Emilia-Romagna"},{n:"Roma",p:"RM",r:"Lazio"},
+  {n:"Rovigo",p:"RO",r:"Veneto"},{n:"Salerno",p:"SA",r:"Campania"},
+  {n:"Sanremo",p:"IM",r:"Liguria"},{n:"Sassari",p:"SS",r:"Sardegna"},
+  {n:"Savona",p:"SV",r:"Liguria"},{n:"Schio",p:"VI",r:"Veneto"},
+  {n:"Senigallia",p:"AN",r:"Marche"},{n:"Seregno",p:"MB",r:"Lombardia"},
+  {n:"Sesto San Giovanni",p:"MI",r:"Lombardia"},{n:"Settimo Torinese",p:"TO",r:"Piemonte"},
+  {n:"Siena",p:"SI",r:"Toscana"},{n:"Siracusa",p:"SR",r:"Sicilia"},
+  {n:"Sondrio",p:"SO",r:"Lombardia"},{n:"Taranto",p:"TA",r:"Puglia"},
+  {n:"Teramo",p:"TE",r:"Abruzzo"},{n:"Terni",p:"TR",r:"Umbria"},
+  {n:"Torino",p:"TO",r:"Piemonte"},{n:"Torre del Greco",p:"NA",r:"Campania"},
+  {n:"Trani",p:"BT",r:"Puglia"},{n:"Trapani",p:"TP",r:"Sicilia"},
+  {n:"Trento",p:"TN",r:"Trentino-Alto Adige"},{n:"Treviso",p:"TV",r:"Veneto"},
+  {n:"Trieste",p:"TS",r:"Friuli-Venezia Giulia"},{n:"Udine",p:"UD",r:"Friuli-Venezia Giulia"},
+  {n:"Valdagno",p:"VI",r:"Veneto"},{n:"Varese",p:"VA",r:"Lombardia"},
+  {n:"Venezia",p:"VE",r:"Veneto"},{n:"Verbania",p:"VB",r:"Piemonte"},
+  {n:"Vercelli",p:"VC",r:"Piemonte"},{n:"Verona",p:"VR",r:"Veneto"},
+  {n:"Vibo Valentia",p:"VV",r:"Calabria"},{n:"Vicenza",p:"VI",r:"Veneto"},
+  {n:"Viterbo",p:"VT",r:"Lazio"},{n:"Vittoria",p:"RG",r:"Sicilia"},
+  {n:"Vittorio Veneto",p:"TV",r:"Veneto"},{n:"Voghera",p:"PV",r:"Lombardia"}
+];
+
+const nfComuneInput = document.getElementById('nfComune');
+const nfAcList = document.getElementById('nfAcList');
+
+nfComuneInput.addEventListener('input', function() {
+  const val = this.value.trim().toLowerCase();
+  nfAcList.innerHTML = '';
+  if (val.length < 2) { nfAcList.classList.remove('show'); return; }
+  const matches = nfComuni.filter(c => c.n.toLowerCase().startsWith(val)).slice(0, 8);
+  if (!matches.length) { nfAcList.classList.remove('show'); return; }
+  matches.forEach(c => {
+    const item = document.createElement('div');
+    item.className = 'nf-ac-item';
+    item.innerHTML = `${c.n} <small>${c.p} — ${c.r}</small>`;
+    item.addEventListener('mousedown', () => {
+      nfComuneInput.value = c.n;
+      document.getElementById('nfProv').value = c.p;
+      document.getElementById('nfReg').value = c.r;
+      nfAcList.classList.remove('show');
+    });
+    nfAcList.appendChild(item);
+  });
+  nfAcList.classList.add('show');
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('#nfComuneWrap')) nfAcList.classList.remove('show');
+});
+document.getElementById('nfProv').addEventListener('input', function() {
+  this.value = this.value.toUpperCase();
+});
+
+document.getElementById('nfAltroChk').addEventListener('change', function() {
+  document.getElementById('nfAltroField').style.display = this.checked ? 'block' : 'none';
+});
+
+let nfFiles = [];
+function nfHandleFiles(files) {
+  for (let f of files) {
+    if (nfFiles.length >= 5) { alert('Massimo 5 file allegabili.'); break; }
+    if (f.size > 5*1024*1024) { alert(f.name+' supera i 5MB.'); continue; }
+    if (!nfFiles.find(x => x.name === f.name)) nfFiles.push(f);
+  }
+  nfRenderPreview();
+}
+function nfRenderPreview() {
+  document.getElementById('nfPreview').innerHTML = nfFiles.map((f,i) =>
+    `<div class="nf-file-chip">📄 ${f.name.length>22?f.name.substring(0,20)+'…':f.name}
+    <span class="nf-rm" onclick="nfRemoveFile(${i})">✕</span></div>`
+  ).join('');
+}
+function nfRemoveFile(i) { nfFiles.splice(i,1); nfRenderPreview(); }
+
+const nfUa = document.getElementById('nfUpload');
+nfUa.addEventListener('dragover', e => { e.preventDefault(); nfUa.style.borderColor='var(--sky)'; });
+nfUa.addEventListener('dragleave', () => { nfUa.style.borderColor=''; });
+nfUa.addEventListener('drop', e => { e.preventDefault(); nfUa.style.borderColor=''; nfHandleFiles(e.dataTransfer.files); });
+
+document.getElementById('nfForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  if (!document.getElementById('nfNome').value.trim()) { document.getElementById('nfNome').focus(); return; }
+  const tel = document.getElementById('nfTel').value.trim();
+  const email = document.getElementById('nfEmail').value.trim();
+  const notice = document.getElementById('nfContactNotice');
+  if (!tel && !email) { notice.classList.add('show'); document.getElementById('nfTel').focus(); return; }
+  notice.classList.remove('show');
+  if (!document.getElementById('nfDest').value) { document.getElementById('nfDest').focus(); return; }
+  if (!document.getElementById('nfTipo').value) { document.getElementById('nfTipo').focus(); return; }
+  if (!document.getElementById('nfComune').value.trim()) { document.getElementById('nfComune').focus(); return; }
+  if (!document.getElementById('nfProv').value.trim()) { document.getElementById('nfProv').focus(); return; }
+  const problemi = [...document.querySelectorAll('input[name="problema[]"]:checked')];
+  if (!problemi.length) { alert('Seleziona almeno una problematica.'); return; }
+
+  const btn = this.querySelector('.nf-btn-submit');
+  btn.innerHTML = '<span>⏳</span> Invio in corso...';
+  btn.disabled = true;
+
+  const formData = new FormData(this);
+  if (nfFiles.length) formData.append('allegati_nomi', nfFiles.map(f=>f.name).join(', '));
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body: formData });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('nfModal').classList.add('show');
+      this.reset(); nfFiles = []; nfRenderPreview();
+      document.getElementById('nfAltroField').style.display = 'none';
+      document.getElementById('nfReg').value = '';
+    } else {
+      alert('Errore nell\'invio. Riprova o contattaci direttamente.');
+    }
+  } catch {
+    alert('Errore di rete. Contattaci a infiltrazioni2011@gmail.com');
+  }
+  btn.innerHTML = '<span>✉️</span> Invia Richiesta';
+  btn.disabled = false;
+});
+
+function nfCloseModal() {
+  document.getElementById('nfModal').classList.remove('show');
+  window.location.href = 'https://ricercaperditeinfiltrazioni.github.io/';
+}
+</script>
 </body>
 </html>
