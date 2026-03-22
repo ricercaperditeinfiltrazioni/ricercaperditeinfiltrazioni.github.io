@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ricercaperditeinfiltrazioni.github.io/sitemap.xml
