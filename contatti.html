@@ -16,107 +16,131 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.css"/>
 <link rel="stylesheet" href="style.css"/>
 <style>
+/* ── PAGINA CONTATTI: layout a colonna singola centrata ── */
+.contatti-single {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contatti-single h2 { text-align: left; }
+.contatti-single p  { text-align: left; }
+.contatti-single .ct-items { text-align: left; }
+.contatti-single .ct-free-box { text-align: left; }
+
 .btn-open-form {
-  display:inline-flex; align-items:center; gap:0.6rem;
-  background:linear-gradient(135deg,#ffd700,#ffaa00);
-  border:none; border-radius:50px; color:#07192b; cursor:pointer;
-  font-family:'Exo 2',sans-serif; font-size:1.05rem; font-weight:700;
-  letter-spacing:0.1em; padding:0.9rem 2rem; text-transform:uppercase;
-  transition:transform 0.15s,box-shadow 0.15s;
-  box-shadow:0 4px 20px rgba(255,215,0,0.3); margin-top:1.5rem;
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  border: none; border-radius: 50px; color: #07192b; cursor: pointer;
+  font-family: 'Exo 2', sans-serif; font-size: 1.05rem; font-weight: 700;
+  letter-spacing: 0.1em; padding: 0.9rem 2.5rem; text-transform: uppercase;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(255,215,0,0.3); margin-top: 2rem;
 }
-.btn-open-form:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,0.45);}
+.btn-open-form:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,215,0,0.45); }
 
+/* ── MODAL FORM ── */
 .nf-modal-overlay {
-  display:none; position:fixed; inset:0;
-  background:rgba(7,25,43,0.93); z-index:2000;
-  align-items:flex-start; justify-content:center;
-  overflow-y:auto; padding:2rem 1rem;
+  display: none; position: fixed; inset: 0;
+  background: rgba(7,25,43,0.93); z-index: 2000;
+  align-items: flex-start; justify-content: center;
+  overflow-y: auto; padding: 2rem 1rem;
 }
-.nf-modal-overlay.show{display:flex;}
-
+.nf-modal-overlay.show { display: flex; }
 .nf-modal-form-box {
-  background:#0d2d4a; border:1px solid rgba(0,180,255,0.25);
-  border-radius:14px; padding:2.5rem 2rem;
-  width:100%; max-width:680px; margin:auto; position:relative;
+  background: #0d2d4a; border: 1px solid rgba(0,180,255,0.25);
+  border-radius: 14px; padding: 2.5rem 2rem;
+  width: 100%; max-width: 680px; margin: auto; position: relative;
 }
 .nf-modal-close-btn {
-  position:absolute; top:1rem; right:1rem;
-  background:rgba(0,180,255,0.1); border:1px solid rgba(0,180,255,0.3);
-  border-radius:50%; color:#00b4ff; cursor:pointer;
-  font-size:1.1rem; width:36px; height:36px;
-  display:flex; align-items:center; justify-content:center;
-  transition:background 0.2s;
+  position: absolute; top: 1rem; right: 1rem;
+  background: rgba(0,180,255,0.1); border: 1px solid rgba(0,180,255,0.3);
+  border-radius: 50%; color: #00b4ff; cursor: pointer;
+  font-size: 1.1rem; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
 }
-.nf-modal-close-btn:hover{background:rgba(0,180,255,0.25);}
-
-.nf-form-title{font-family:'Exo 2',sans-serif;font-size:1.4rem;font-weight:700;color:#e8f4fd;margin-bottom:0.3rem;padding-right:2rem;}
-.nf-form-req{font-size:0.88rem;color:#8aafc7;margin-bottom:1.6rem;font-weight:400;line-height:1.6;}
-.nf-form-req span{display:block;}
+.nf-modal-close-btn:hover { background: rgba(0,180,255,0.25); }
+.nf-form-title { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; font-weight: 700; color: #e8f4fd; margin-bottom: 0.3rem; padding-right: 2rem; }
+.nf-form-req { font-size: 0.88rem; color: #8aafc7; margin-bottom: 1.6rem; font-weight: 400; line-height: 1.6; }
+.nf-form-req span { display: block; }
 
 .nf-section {
-  font-family:'Exo 2',sans-serif; font-size:0.72rem; font-weight:600;
-  color:#00b4ff; letter-spacing:0.18em; text-transform:uppercase;
-  margin:1.8rem 0 0.9rem; display:flex; align-items:center; gap:0.8rem;
+  font-family: 'Exo 2', sans-serif; font-size: 0.72rem; font-weight: 600;
+  color: #00b4ff; letter-spacing: 0.18em; text-transform: uppercase;
+  margin: 1.8rem 0 0.9rem; display: flex; align-items: center; gap: 0.8rem;
 }
-.nf-section::after{content:'';flex:1;height:1px;background:rgba(0,180,255,0.18);}
-.nf-section-note{font-size:0.72rem;color:#8aafc7;text-transform:none;letter-spacing:0;font-weight:400;}
+.nf-section::after { content: ''; flex: 1; height: 1px; background: rgba(0,180,255,0.18); }
+.nf-section-note { font-size: 0.72rem; color: #8aafc7; text-transform: none; letter-spacing: 0; font-weight: 400; }
 
-.nf-fg{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.1rem;position:relative;}
-.nf-fgr{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem;}
-.nf-fgr3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin-bottom:1.1rem;}
-.nf-fgr .nf-fg,.nf-fgr3 .nf-fg{margin-bottom:0;}
+.nf-fg { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.1rem; position: relative; }
+.nf-fgr { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem; }
+.nf-fgr3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem; }
+.nf-fgr .nf-fg, .nf-fgr3 .nf-fg { margin-bottom: 0; }
 
-.nf-fg label{font-family:'Exo 2',sans-serif;font-size:0.78rem;font-weight:600;color:#00b4ff;letter-spacing:0.08em;text-transform:uppercase;}
-
-.nf-fg input,.nf-fg select,.nf-fg textarea {
-  background:rgba(7,25,43,0.85); border:1px solid rgba(0,180,255,0.18);
-  border-radius:6px; color:#e8f4fd; font-family:'Exo 2',sans-serif;
-  font-size:1rem; font-weight:400; padding:0.75rem 1rem; width:100%;
-  transition:border-color 0.2s,box-shadow 0.2s;
+.nf-fg label { font-family: 'Exo 2', sans-serif; font-size: 0.78rem; font-weight: 600; color: #00b4ff; letter-spacing: 0.08em; text-transform: uppercase; }
+.nf-fg input, .nf-fg select, .nf-fg textarea {
+  background: rgba(7,25,43,0.85); border: 1px solid rgba(0,180,255,0.18);
+  border-radius: 6px; color: #e8f4fd; font-family: 'Exo 2', sans-serif;
+  font-size: 1rem; font-weight: 400; padding: 0.75rem 1rem; width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.nf-fg input:focus,.nf-fg select:focus,.nf-fg textarea:focus{outline:none;border-color:#00b4ff;box-shadow:0 0 0 2px rgba(0,180,255,0.1);}
-.nf-fg input.error{border-color:#ff4444;}
-.nf-fg input::placeholder,.nf-fg textarea::placeholder{color:#8aafc7;opacity:0.55;}
-.nf-fg select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath stroke='%2300b4ff' stroke-width='1.5' fill='none' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
-.nf-fg select option{background:#0a2137;color:#e8f4fd;}
-.nf-fg textarea{resize:vertical;min-height:100px;}
+.nf-fg input:focus, .nf-fg select:focus, .nf-fg textarea:focus { outline: none; border-color: #00b4ff; box-shadow: 0 0 0 2px rgba(0,180,255,0.1); }
+.nf-fg input.error { border-color: #ff4444; }
+.nf-fg input::placeholder, .nf-fg textarea::placeholder { color: #8aafc7; opacity: 0.55; }
+.nf-fg select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath stroke='%2300b4ff' stroke-width='1.5' fill='none' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+.nf-fg select option { background: #0a2137; color: #e8f4fd; }
+.nf-fg textarea { resize: vertical; min-height: 100px; }
 
-.field-error{font-size:0.78rem;color:#ff6666;margin-top:0.2rem;display:none;}
-.field-error.show{display:block;}
+.field-error { font-size: 0.78rem; color: #ff6666; margin-top: 0.2rem; display: none; }
+.field-error.show { display: block; }
 
-.nf-autocomplete{position:absolute;top:100%;left:0;right:0;background:#0d2d4a;border:1px solid #00b4ff;border-top:none;border-radius:0 0 6px 6px;z-index:300;max-height:190px;overflow-y:auto;display:none;}
-.nf-autocomplete.show{display:block;}
-.nf-ac-item{padding:0.6rem 1rem;font-size:0.95rem;cursor:pointer;color:#e8f4fd;border-bottom:1px solid rgba(0,180,255,0.07);font-family:'Exo 2',sans-serif;}
-.nf-ac-item:hover{background:rgba(0,180,255,0.12);}
-.nf-ac-item small{color:#8aafc7;font-size:0.78rem;margin-left:0.4rem;}
+.nf-autocomplete { position: absolute; top: 100%; left: 0; right: 0; background: #0d2d4a; border: 1px solid #00b4ff; border-top: none; border-radius: 0 0 6px 6px; z-index: 300; max-height: 190px; overflow-y: auto; display: none; }
+.nf-autocomplete.show { display: block; }
+.nf-ac-item { padding: 0.6rem 1rem; font-size: 0.95rem; cursor: pointer; color: #e8f4fd; border-bottom: 1px solid rgba(0,180,255,0.07); font-family: 'Exo 2', sans-serif; }
+.nf-ac-item:hover { background: rgba(0,180,255,0.12); }
+.nf-ac-item small { color: #8aafc7; font-size: 0.78rem; margin-left: 0.4rem; }
 
-.nf-check-col{display:flex;flex-direction:column;gap:0.5rem;margin-top:0.3rem;}
-.nf-check-item{display:flex;align-items:center;gap:0.75rem;background:rgba(7,25,43,0.5);border:1px solid rgba(0,180,255,0.18);border-radius:6px;padding:0.65rem 1rem;cursor:pointer;font-family:'Exo 2',sans-serif;font-size:0.95rem;font-weight:400;color:#e8f4fd;user-select:none;transition:border-color 0.2s,background 0.2s;}
-.nf-check-item:hover{border-color:#00b4ff;background:rgba(0,180,255,0.05);}
-.nf-check-item input[type="checkbox"]{display:none;}
-.nf-chk{width:18px;height:18px;border:1.5px solid #8aafc7;border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
-.nf-check-item input:checked~.nf-chk{background:#00b4ff;border-color:#00b4ff;}
-.nf-check-item input:checked~.nf-chk::after{content:'✓';font-size:12px;color:#07192b;font-weight:bold;}
+.nf-check-col { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.3rem; }
+.nf-check-item { display: flex; align-items: center; gap: 0.75rem; background: rgba(7,25,43,0.5); border: 1px solid rgba(0,180,255,0.18); border-radius: 6px; padding: 0.65rem 1rem; cursor: pointer; font-family: 'Exo 2', sans-serif; font-size: 0.95rem; font-weight: 400; color: #e8f4fd; user-select: none; transition: border-color 0.2s, background 0.2s; }
+.nf-check-item:hover { border-color: #00b4ff; background: rgba(0,180,255,0.05); }
+.nf-check-item input[type="checkbox"] { display: none; }
+.nf-chk { width: 18px; height: 18px; border: 1.5px solid #8aafc7; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.nf-check-item input:checked ~ .nf-chk { background: #00b4ff; border-color: #00b4ff; }
+.nf-check-item input:checked ~ .nf-chk::after { content: '✓'; font-size: 12px; color: #07192b; font-weight: bold; }
 
-.nf-notice{background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.35);border-radius:6px;padding:0.6rem 1rem;font-size:0.88rem;font-weight:500;color:#ffd700;margin-top:0.4rem;display:none;}
-.nf-notice.show{display:block;}
+.nf-notice { background: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.35); border-radius: 6px; padding: 0.6rem 1rem; font-size: 0.88rem; font-weight: 500; color: #ffd700; margin-top: 0.4rem; display: none; }
+.nf-notice.show { display: block; }
 
-.nf-btn-submit{width:100%;background:linear-gradient(135deg,#ffd700,#ffaa00);border:none;border-radius:50px;color:#07192b;cursor:pointer;font-family:'Exo 2',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.1em;padding:1rem 2rem;margin-top:1.8rem;text-transform:uppercase;transition:transform 0.15s,box-shadow 0.15s,opacity 0.2s;box-shadow:0 4px 20px rgba(255,215,0,0.25);display:flex;align-items:center;justify-content:center;gap:0.6rem;}
-.nf-btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,0.4);}
-.nf-btn-submit:active{transform:translateY(0);}
-.nf-btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+/* Uploadcare custom styling */
+.uc-wrap { margin-top: 0.4rem; }
+uc-file-uploader-regular {
+  --uc-primary: #00b4ff;
+  --uc-foreground: #e8f4fd;
+  --uc-background: rgba(7,25,43,0.85);
+  --uc-border: rgba(0,180,255,0.3);
+}
 
-.nf-success-overlay{display:none;position:fixed;inset:0;background:rgba(7,25,43,0.92);z-index:3000;align-items:center;justify-content:center;}
-.nf-success-overlay.show{display:flex;}
-.nf-success-box{background:#0d2d4a;border:1px solid #00b4ff;border-radius:14px;padding:2.5rem 2rem;max-width:460px;width:90%;text-align:center;}
-.nf-success-icon{font-size:3.5rem;margin-bottom:1rem;}
-.nf-success-title{font-family:'Exo 2',sans-serif;font-size:1.5rem;font-weight:700;color:#00b4ff;margin-bottom:0.8rem;}
-.nf-success-text{font-size:1rem;color:#8aafc7;line-height:1.7;font-family:'Exo 2',sans-serif;}
-.nf-success-close{margin-top:2rem;background:transparent;border:2px solid #00b4ff;border-radius:50px;color:#00b4ff;cursor:pointer;font-family:'Exo 2',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.08em;padding:0.7rem 2.5rem;text-transform:uppercase;transition:background 0.2s,color 0.2s;}
-.nf-success-close:hover{background:#00b4ff;color:#07192b;}
+/* File list mostrata sotto uploader */
+.uc-file-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+.uc-file-chip { background: rgba(0,180,255,0.1); border: 1px solid #00b4ff; border-radius: 20px; padding: 0.25rem 0.8rem; font-size: 0.8rem; color: #00b4ff; font-family: 'Exo 2', sans-serif; display: flex; align-items: center; gap: 0.4rem; }
+.uc-file-chip a { color: #00b4ff; text-decoration: none; }
+.uc-file-chip a:hover { text-decoration: underline; }
 
-@media(max-width:640px){.nf-fgr,.nf-fgr3{grid-template-columns:1fr;}.nf-modal-form-box{padding:1.5rem 1rem;}}
+.nf-btn-submit { width: 100%; background: linear-gradient(135deg, #ffd700, #ffaa00); border: none; border-radius: 50px; color: #07192b; cursor: pointer; font-family: 'Exo 2', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; padding: 1rem 2rem; margin-top: 1.8rem; text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s; box-shadow: 0 4px 20px rgba(255,215,0,0.25); display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+.nf-btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,215,0,0.4); }
+.nf-btn-submit:active { transform: translateY(0); }
+.nf-btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.nf-success-overlay { display: none; position: fixed; inset: 0; background: rgba(7,25,43,0.92); z-index: 3000; align-items: center; justify-content: center; }
+.nf-success-overlay.show { display: flex; }
+.nf-success-box { background: #0d2d4a; border: 1px solid #00b4ff; border-radius: 14px; padding: 2.5rem 2rem; max-width: 460px; width: 90%; text-align: center; }
+.nf-success-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+.nf-success-title { font-family: 'Exo 2', sans-serif; font-size: 1.5rem; font-weight: 700; color: #00b4ff; margin-bottom: 0.8rem; }
+.nf-success-text { font-size: 1rem; color: #8aafc7; line-height: 1.7; font-family: 'Exo 2', sans-serif; }
+.nf-success-close { margin-top: 2rem; background: transparent; border: 2px solid #00b4ff; border-radius: 50px; color: #00b4ff; cursor: pointer; font-family: 'Exo 2', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.08em; padding: 0.7rem 2.5rem; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+.nf-success-close:hover { background: #00b4ff; color: #07192b; }
+
+@media(max-width:640px) { .nf-fgr, .nf-fgr3 { grid-template-columns: 1fr; } .nf-modal-form-box { padding: 1.5rem 1rem; } }
 </style>
 </head>
 <body>
@@ -152,46 +176,39 @@
 
 <section class="section-dark">
   <div class="container">
-    <div class="contatti-layout">
+    <div class="contatti-single">
 
-      <!-- INFO CONTATTI -->
-      <div class="ct-info rv">
-        <div class="section-label">Come contattarci</div>
-        <h2>Siamo <span class="accent">disponibili</span><br>per te</h2>
-        <p>Per richiedere un preventivo è sufficiente inviarci un'email o chiamarci direttamente. Indica sommariamente il tipo di problema riscontrato e la tua zona: ti risponderemo il prima possibile.</p>
-        <div class="ct-items">
-          <a href="mailto:infiltrazioni2011@gmail.com" class="ct-item">
-            <span class="ct-ico">✉️</span>
-            <div><div class="ct-lbl">Email — canale preferito</div><div class="ct-val">infiltrazioni2011@gmail.com</div></div>
-          </a>
-          <a href="tel:+393473402443" class="ct-item">
-            <span class="ct-ico">📞</span>
-            <div><div class="ct-lbl">Telefono & WhatsApp</div><div class="ct-val">347 340 2443</div></div>
-          </a>
-          <div class="ct-item" style="cursor:default">
-            <span class="ct-ico">🕐</span>
-            <div><div class="ct-lbl">Disponibilità</div><div class="ct-val">Lun – Sab, ore 8:00 – 19:00</div></div>
-          </div>
-          <div class="ct-item" style="cursor:default">
-            <span class="ct-ico">🇮🇹</span>
-            <div><div class="ct-lbl">Copertura territoriale</div><div class="ct-val">Tutto il territorio nazionale</div></div>
-          </div>
+      <div class="section-label">Come contattarci</div>
+      <h2>Siamo <span class="accent">disponibili</span><br>per te</h2>
+      <p>Per richiedere un preventivo è sufficiente inviarci un'email o chiamarci direttamente. Indica sommariamente il tipo di problema riscontrato e la tua zona: ti risponderemo il prima possibile.</p>
+
+      <div class="ct-items" style="margin-top:1.5rem;">
+        <a href="mailto:infiltrazioni2011@gmail.com" class="ct-item">
+          <span class="ct-ico">✉️</span>
+          <div><div class="ct-lbl">Email — canale preferito</div><div class="ct-val">infiltrazioni2011@gmail.com</div></div>
+        </a>
+        <a href="tel:+393473402443" class="ct-item">
+          <span class="ct-ico">📞</span>
+          <div><div class="ct-lbl">Telefono & WhatsApp</div><div class="ct-val">347 340 2443</div></div>
+        </a>
+        <div class="ct-item" style="cursor:default">
+          <span class="ct-ico">🕐</span>
+          <div><div class="ct-lbl">Disponibilità</div><div class="ct-val">Lun – Sab, ore 8:00 – 19:00</div></div>
         </div>
-        <div class="ct-free-box">
-          <h4>🎁 Preventivi sempre gratuiti</h4>
-          <p>Non ti chiediamo nessun impegno. Descrivi il problema, indica la città/regione e i tuoi recapiti: ti risponderemo con una valutazione tecnica preliminare.</p>
+        <div class="ct-item" style="cursor:default">
+          <span class="ct-ico">🇮🇹</span>
+          <div><div class="ct-lbl">Copertura territoriale</div><div class="ct-val">Tutto il territorio nazionale</div></div>
         </div>
-        <button class="btn-open-form" onclick="nfOpenModal()">✉️ Compila la richiesta</button>
       </div>
 
-      <!-- DESTRA -->
-      <div class="rv" style="display:flex;align-items:center;justify-content:center;">
-        <div style="text-align:center;padding:3rem 2rem;background:rgba(13,45,74,0.4);border:1px dashed rgba(0,180,255,0.2);border-radius:12px;width:100%;">
-          <div style="font-size:3rem;margin-bottom:1rem;">📋</div>
-          <div style="font-family:'Exo 2',sans-serif;font-size:1.1rem;font-weight:600;color:#e8f4fd;margin-bottom:0.5rem;">Richiedi il tuo preventivo</div>
-          <div style="font-size:0.9rem;color:#8aafc7;margin-bottom:1.5rem;">Compila il modulo in pochi minuti.<br>Risposta garantita entro 24h.</div>
-          <button class="btn-open-form" onclick="nfOpenModal()" style="margin-top:0;">✉️ Compila la richiesta</button>
-        </div>
+      <div class="ct-free-box" style="margin-top:1.5rem;">
+        <h4>🎁 Preventivi sempre gratuiti</h4>
+        <p>Non ti chiediamo nessun impegno. Descrivi il problema, indica la città/regione e i tuoi recapiti: ti risponderemo con una valutazione tecnica preliminare.</p>
+      </div>
+
+      <!-- UNICO BOTTONE centrato -->
+      <div style="text-align:center;">
+        <button class="btn-open-form" onclick="nfOpenModal()">✉️ Compila la richiesta</button>
       </div>
 
     </div>
@@ -364,9 +381,23 @@
       </div>
 
       <div class="nf-section">Allegati (opzionale)</div>
-      <uc-config ctx-name="nf-uploader" pubkey="b5e1fbe8cc6ab7c24fb4" multiple="true" max-files="5" accept="image/*,.pdf" source-list="local,camera"></uc-config>
-      <uc-file-uploader-regular ctx-name="nf-uploader" style="--uc-primary-color:#00b4ff;"></uc-file-uploader-regular>
-      <div style="font-size:0.8rem;color:#8aafc7;margin-top:0.4rem;">Immagini (JPG, PNG) o PDF — max 5 file</div>
+      <div class="uc-wrap">
+        <uc-config
+          ctx-name="nf-uploader"
+          pubkey="b5e1fbe8cc6ab7c24fb4"
+          multiple="true"
+          max-files="5"
+          accept="image/*,.pdf"
+          source-list="local,camera"
+        ></uc-config>
+        <uc-file-uploader-regular
+          id="nfUploader"
+          ctx-name="nf-uploader"
+          style="--uc-primary-color:#00b4ff;"
+        ></uc-file-uploader-regular>
+        <div id="nfFileList" class="uc-file-list"></div>
+      </div>
+      <div style="font-size:0.8rem;color:#8aafc7;margin-top:0.4rem;">Immagini (JPG, PNG) o PDF — max 5 file. I file caricati saranno accessibili tramite link nella mail.</div>
 
       <button type="submit" class="nf-btn-submit"><span>✉️</span> Invia Richiesta</button>
     </form>
@@ -431,6 +462,7 @@ const nfComuni = [
   {n:"Voghera",p:"PV",r:"Lombardia"}
 ];
 
+// ── Modal apri/chiudi ──
 window.nfOpenModal = function() {
   document.getElementById('nfModalOverlay').classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -444,12 +476,11 @@ window.nfCloseSuccess = function() {
   document.body.style.overflow = '';
   window.location.href = 'https://ricercaperditeinfiltrazioni.github.io/';
 };
-
 document.getElementById('nfModalOverlay').addEventListener('click', function(e) {
   if (e.target === this) window.nfCloseFormModal();
 });
 
-// Autocomplete
+// ── Autocomplete comune ──
 const nfComuneInput = document.getElementById('nfComune');
 const nfAcList = document.getElementById('nfAcList');
 nfComuneInput.addEventListener('input', function() {
@@ -475,36 +506,52 @@ nfComuneInput.addEventListener('input', function() {
 document.addEventListener('click', e => { if (!e.target.closest('#nfComuneWrap')) nfAcList.classList.remove('show'); });
 document.getElementById('nfProv').addEventListener('input', function() { this.value = this.value.toUpperCase(); });
 
-// Altro
+// ── Altro checkbox ──
 document.getElementById('nfAltroChk').addEventListener('change', function() {
   document.getElementById('nfAltroField').style.display = this.checked ? 'block' : 'none';
 });
 
-// Uploadcare
+// ── Uploadcare: ascolto evento corretto sui web components ──
 let uploadedUrls = [];
-document.addEventListener('change', (e) => {
-  const uploader = e.target.closest('uc-file-uploader-regular');
-  if (uploader) {
-    const ctx = uploader.getAttribute('ctx-name');
-    if (ctx === 'nf-uploader') {
-      const files = e.detail?.allEntries?.filter(f => f.status === 'success') || [];
-      uploadedUrls = files.map(f => f.cdnUrl);
-      document.getElementById('nfAllegatiUrl').value = uploadedUrls.length ? 'Link allegati:\n' + uploadedUrls.join('\n') : '';
-    }
-  }
+
+// Attendiamo che il custom element sia definito poi aggiungiamo il listener
+customElements.whenDefined('uc-file-uploader-regular').then(() => {
+  const uploader = document.getElementById('nfUploader');
+  if (!uploader) return;
+
+  // L'evento corretto per Uploadcare v1 è 'change' sull'elemento API
+  uploader.addEventListener('change', (e) => {
+    const allFiles = e.detail?.allEntries || [];
+    const done = allFiles.filter(f => f.status === 'success');
+    uploadedUrls = done.map(f => f.cdnUrl);
+
+    // Mostra i file caricati come chip cliccabili
+    const list = document.getElementById('nfFileList');
+    list.innerHTML = uploadedUrls.map((url, i) => {
+      const name = url.split('/').pop() || `file-${i+1}`;
+      return `<div class="uc-file-chip">📎 <a href="${url}" target="_blank">${name}</a></div>`;
+    }).join('');
+
+    // Aggiorna campo hidden
+    document.getElementById('nfAllegatiUrl').value = uploadedUrls.length
+      ? 'Link allegati:\n' + uploadedUrls.join('\n')
+      : '';
+  });
 });
 
-// Validazione
+// ── Validazione ──
 function showErr(id, show) { document.getElementById(id).classList.toggle('show', show); }
 function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
 function validTel(v) { const c = v.replace(/[\s\-().+]/g,''); return c.length >= 8 && /^\d+$/.test(c); }
 
-// Submit
+// ── Submit ──
 document.getElementById('nfForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   let ok = true;
+
   const nome = document.getElementById('nfNome').value.trim();
   showErr('errNome', !nome); if (!nome) ok = false;
+
   const tel = document.getElementById('nfTel').value.trim();
   const email = document.getElementById('nfEmail').value.trim();
   const notice = document.getElementById('nfContactNotice');
@@ -514,6 +561,7 @@ document.getElementById('nfForm').addEventListener('submit', async function(e) {
     if (tel && !validTel(tel)) { showErr('errTel', true); ok = false; } else showErr('errTel', false);
     if (email && !validEmail(email)) { showErr('errEmail', true); ok = false; } else showErr('errEmail', false);
   }
+
   const dest = document.getElementById('nfDest').value;
   showErr('errDest', !dest); if (!dest) ok = false;
   const tipo = document.getElementById('nfTipo').value;
@@ -524,6 +572,7 @@ document.getElementById('nfForm').addEventListener('submit', async function(e) {
   showErr('errProv', !prov); if (!prov) ok = false;
   const problemi = [...document.querySelectorAll('input[name="problema[]"]:checked')];
   showErr('errProblema', !problemi.length); if (!problemi.length) ok = false;
+
   if (!ok) return;
 
   const btn = this.querySelector('.nf-btn-submit');
@@ -533,12 +582,14 @@ document.getElementById('nfForm').addEventListener('submit', async function(e) {
   const formData = new FormData(this);
 
   try {
-    const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body: formData });
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
     const data = await res.json();
     if (data.success) {
       window.nfCloseFormModal();
       document.getElementById('nfSuccessOverlay').classList.add('show');
-      this.reset(); uploadedUrls = [];
+      this.reset();
+      uploadedUrls = [];
+      document.getElementById('nfFileList').innerHTML = '';
       document.getElementById('nfAltroField').style.display = 'none';
       document.getElementById('nfReg').value = '';
     } else {
